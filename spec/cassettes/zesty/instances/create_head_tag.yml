@@ -2,6 +2,55 @@
 http_interactions:
 - request:
     method: post
+    uri: https://svc.zesty.io/auth/login
+    body:
+      encoding: UTF-8
+      string: "-----------------------d5ae209f5c823d137efacb8e5e6f9c68428a9031ff\r\nContent-Disposition:
+        form-data; name=\"email\"\r\n\r\n<EMAIL>\r\n-----------------------d5ae209f5c823d137efacb8e5e6f9c68428a9031ff\r\nContent-Disposition:
+        form-data; name=\"password\"\r\n\r\n<PASSWORD>\r\n-----------------------d5ae209f5c823d137efacb8e5e6f9c68428a9031ff--\r\n"
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Type:
+      - multipart/form-data; boundary=---------------------d5ae209f5c823d137efacb8e5e6f9c68428a9031ff
+      Host:
+      - svc.zesty.io
+      User-Agent:
+      - http.rb/4.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Origin
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Set-Cookie:
+      - APP_SID=<TOKEN>; Domain=.zesty.io; Path=/; Secure
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '214'
+      Etag:
+      - W/"d6-RI96CY9eyCON7nIxXhrtHe3orl0"
+      Date:
+      - Tue, 24 Sep 2019 18:17:05 GMT
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"message":"Logged in successfully.","status":"OK","data":{"data":"07bcfa3b78d5d8db0b2120cff62eb7f769e5b451"},"meta":{"userZuid":"5-c6d69fadc2-b8k5kz","token":"<TOKEN>"},"code":200}'
+    http_version: 
+  recorded_at: Tue, 24 Sep 2019 18:17:05 GMT
+- request:
+    method: post
     uri: https://<INSTANCE_ZUID>.api.zesty.io/v1/web/headtags
     body:
       encoding: UTF-8
@@ -25,7 +74,7 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Tue, 24 Sep 2019 16:39:30 GMT
+      - Tue, 24 Sep 2019 18:17:05 GMT
       Content-Type:
       - text/plain; charset=utf-8
       Content-Length:
@@ -45,14 +94,14 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: '{"_meta":{"timestamp":"2019-09-24T16:39:30.571076035Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ZUID":"21-a8e8d8bf90-zj7194","type":"link","attributes":{"data-manual":true,"href":"favicon-64.png","rel":"icon","type":"image/png"},"resourceZUID":"<INSTANCE_ZUID>","sort":1,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-24T16:39:30.561203655Z","updatedAt":"2019-09-24T16:39:30.561210119Z"}}
+      string: '{"_meta":{"timestamp":"2019-09-24T18:17:05.519480278Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ZUID":"21-cefd83a3f7-rv0f7h","type":"link","attributes":{"data-manual":true,"href":"favicon-64.png","rel":"icon","type":"image/png"},"resourceZUID":"<INSTANCE_ZUID>","sort":1,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-24T18:17:05.511141938Z","updatedAt":"2019-09-24T18:17:05.511147679Z"}}
 
 '
     http_version: 
-  recorded_at: Tue, 24 Sep 2019 16:39:30 GMT
+  recorded_at: Tue, 24 Sep 2019 18:17:05 GMT
 - request:
     method: delete
-    uri: https://<INSTANCE_ZUID>.api.zesty.io/v1/web/headtags/21-a8e8d8bf90-zj7194
+    uri: https://<INSTANCE_ZUID>.api.zesty.io/v1/web/headtags/21-cefd83a3f7-rv0f7h
     body:
       encoding: UTF-8
       string: ''
@@ -73,11 +122,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2019 16:39:30 GMT
+      - Tue, 24 Sep 2019 18:17:05 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '447'
+      - '448'
       Vary:
       - Accept-Encoding
       Access-Control-Allow-Credentials:
@@ -95,9 +144,9 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"_meta":{"timestamp":"2019-09-24T16:39:30.81214646Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ZUID":"21-a8e8d8bf90-zj7194","type":"link","attributes":{"data-manual":true,"href":"favicon-64.png","rel":"icon","type":"image/png"},"resourceZUID":"<INSTANCE_ZUID>","sort":1,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-24T16:39:30Z","updatedAt":"2019-09-24T16:39:30Z"}}
+      string: '{"_meta":{"timestamp":"2019-09-24T18:17:05.793996576Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ZUID":"21-cefd83a3f7-rv0f7h","type":"link","attributes":{"data-manual":true,"href":"favicon-64.png","rel":"icon","type":"image/png"},"resourceZUID":"<INSTANCE_ZUID>","sort":1,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-24T18:17:05Z","updatedAt":"2019-09-24T18:17:05Z"}}
 
 '
     http_version: 
-  recorded_at: Tue, 24 Sep 2019 16:39:30 GMT
+  recorded_at: Tue, 24 Sep 2019 18:17:05 GMT
 recorded_with: VCR 5.0.0

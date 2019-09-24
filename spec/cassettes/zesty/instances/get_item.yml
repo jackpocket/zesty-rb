@@ -1,6 +1,55 @@
 ---
 http_interactions:
 - request:
+    method: post
+    uri: https://svc.zesty.io/auth/login
+    body:
+      encoding: UTF-8
+      string: "-----------------------ca92674af92906daebc64b2cb8056476631d595824\r\nContent-Disposition:
+        form-data; name=\"email\"\r\n\r\n<EMAIL>\r\n-----------------------ca92674af92906daebc64b2cb8056476631d595824\r\nContent-Disposition:
+        form-data; name=\"password\"\r\n\r\n<PASSWORD>\r\n-----------------------ca92674af92906daebc64b2cb8056476631d595824--\r\n"
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Type:
+      - multipart/form-data; boundary=---------------------ca92674af92906daebc64b2cb8056476631d595824
+      Host:
+      - svc.zesty.io
+      User-Agent:
+      - http.rb/4.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Origin
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Set-Cookie:
+      - APP_SID=<TOKEN>; Domain=.zesty.io; Path=/; Secure
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '214'
+      Etag:
+      - W/"d6-mGqZzjUH2i5Am9M/OGFEC69sopg"
+      Date:
+      - Tue, 24 Sep 2019 18:16:58 GMT
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"message":"Logged in successfully.","status":"OK","data":{"data":"6d666972fc0d41a49aa74f71efefe09c3bf90f5c"},"meta":{"userZuid":"5-c6d69fadc2-b8k5kz","token":"<TOKEN>"},"code":200}'
+    http_version: 
+  recorded_at: Tue, 24 Sep 2019 18:16:58 GMT
+- request:
     method: get
     uri: https://<INSTANCE_ZUID>.api.zesty.io/v1/content/models/6-d08392dbc9-9gl4bk/items/7-b29aa3e7ee-0swr1f
     body:
@@ -23,7 +72,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2019 16:35:23 GMT
+      - Tue, 24 Sep 2019 18:16:58 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -45,10 +94,10 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"_meta":{"timestamp":"2019-09-24T16:35:23.823464034Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"web":{"metaDescription":"","metaTitle":null,"metaLinkText":null,"metaKeywords":null,"parentZUID":null,"pathPart":null,"path":null,"sitemapPriority":0,"canonicalTagMode":0,"canonicalQueryParamWhitelist":null,"canonicalTagCustomValue":null,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-23T22:52:49Z","updatedAt":"2019-09-23T22:52:49Z"},"meta":{"ZUID":"7-b29aa3e7ee-0swr1f","masterZUID":"7-b29aa3e7ee-0swr1f","contentModelZUID":"6-d08392dbc9-9gl4bk","contentModelName":null,"sort":null,"listed":true,"version":58,"langID":1,"createdAt":"2019-09-12T20:20:06Z","updatedAt":"2019-09-23T22:52:49Z"},"siblings":{"en-US":"7-b29aa3e7ee-0swr1f"},"data":{"display_order":3,"jackpot_amount":2300000,"lottery_name":"New
+      string: '{"_meta":{"timestamp":"2019-09-24T18:16:58.811754265Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"web":{"metaDescription":"","metaTitle":null,"metaLinkText":null,"metaKeywords":null,"parentZUID":null,"pathPart":null,"path":null,"sitemapPriority":0,"canonicalTagMode":0,"canonicalQueryParamWhitelist":null,"canonicalTagCustomValue":null,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-24T18:03:40Z","updatedAt":"2019-09-24T18:03:40Z"},"meta":{"ZUID":"7-b29aa3e7ee-0swr1f","masterZUID":"7-b29aa3e7ee-0swr1f","contentModelZUID":"6-d08392dbc9-9gl4bk","contentModelName":null,"sort":null,"listed":true,"version":62,"langID":1,"createdAt":"2019-09-12T20:20:06Z","updatedAt":"2019-09-24T18:03:39Z"},"siblings":{"en-US":"7-b29aa3e7ee-0swr1f"},"data":{"display_order":3,"jackpot_amount":2300000,"lottery_name":"New
         York Lotto","next_drawing":"2019-09-26","primary_color":"#3281BB"}}}
 
 '
     http_version: 
-  recorded_at: Tue, 24 Sep 2019 16:35:23 GMT
+  recorded_at: Tue, 24 Sep 2019 18:16:58 GMT
 recorded_with: VCR 5.0.0

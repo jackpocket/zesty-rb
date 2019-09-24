@@ -1,6 +1,55 @@
 ---
 http_interactions:
 - request:
+    method: post
+    uri: https://svc.zesty.io/auth/login
+    body:
+      encoding: UTF-8
+      string: "-----------------------9dfd748059306111d5447f9bc4b0174f696588d852\r\nContent-Disposition:
+        form-data; name=\"email\"\r\n\r\n<EMAIL>\r\n-----------------------9dfd748059306111d5447f9bc4b0174f696588d852\r\nContent-Disposition:
+        form-data; name=\"password\"\r\n\r\n<PASSWORD>\r\n-----------------------9dfd748059306111d5447f9bc4b0174f696588d852--\r\n"
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Type:
+      - multipart/form-data; boundary=---------------------9dfd748059306111d5447f9bc4b0174f696588d852
+      Host:
+      - svc.zesty.io
+      User-Agent:
+      - http.rb/4.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Origin
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Set-Cookie:
+      - APP_SID=<TOKEN>; Domain=.zesty.io; Path=/; Secure
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '214'
+      Etag:
+      - W/"d6-wJ59BKgIzKNeEVQl+QwNURJli8c"
+      Date:
+      - Tue, 24 Sep 2019 18:17:06 GMT
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"message":"Logged in successfully.","status":"OK","data":{"data":"28f870da938733b361e7c8e076f096945bdafa64"},"meta":{"userZuid":"5-c6d69fadc2-b8k5kz","token":"<TOKEN>"},"code":200}'
+    http_version: 
+  recorded_at: Tue, 24 Sep 2019 18:17:06 GMT
+- request:
     method: get
     uri: https://accounts.api.zesty.io/v1/instances/<INSTANCE_ZUID>
     body:
@@ -23,7 +72,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2019 16:35:19 GMT
+      - Tue, 24 Sep 2019 18:17:06 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -45,9 +94,9 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"_meta":{"timestamp":"2019-09-24T16:35:19.257949038Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ID":8355883,"ZUID":"<INSTANCE_ZUID>","ecoID":null,"ecoZUID":null,"randomHashID":"2b8zbm48","domain":"jackpockettest3.zesty.site","name":"test3","planID":17,"cancelledReason":null,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","prefs":null,"blueprintID":1,"blueprintZUID":"14-64329e0-555644","requiresTwoFactor":0,"legacy":false,"screenshotURL":null,"createdAt":"2019-08-28T19:12:14Z","updatedAt":"2019-09-23T18:07:35Z"}}
+      string: '{"_meta":{"timestamp":"2019-09-24T18:17:06.849993466Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ID":8355883,"ZUID":"<INSTANCE_ZUID>","ecoID":null,"ecoZUID":null,"randomHashID":"2b8zbm48","domain":"jackpockettest3.zesty.site","name":"test3","planID":17,"cancelledReason":null,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","prefs":null,"blueprintID":1,"blueprintZUID":"14-64329e0-555644","requiresTwoFactor":0,"legacy":false,"screenshotURL":null,"createdAt":"2019-08-28T19:12:14Z","updatedAt":"2019-09-23T18:07:35Z"}}
 
 '
     http_version: 
-  recorded_at: Tue, 24 Sep 2019 16:35:19 GMT
+  recorded_at: Tue, 24 Sep 2019 18:17:06 GMT
 recorded_with: VCR 5.0.0

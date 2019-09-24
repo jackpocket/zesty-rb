@@ -5,16 +5,16 @@ http_interactions:
     uri: https://svc.zesty.io/auth/login
     body:
       encoding: UTF-8
-      string: "-----------------------9dab9fab242324fe2ab2f27e58c1cde7f8233e58f0\r\nContent-Disposition:
-        form-data; name=\"email\"\r\n\r\n<EMAIL>\r\n-----------------------9dab9fab242324fe2ab2f27e58c1cde7f8233e58f0\r\nContent-Disposition:
-        form-data; name=\"password\"\r\n\r\n<PASSWORD>\r\n-----------------------9dab9fab242324fe2ab2f27e58c1cde7f8233e58f0--\r\n"
+      string: "-----------------------a8c569d85aff17cf2762fe0c944d494f1ad7ebc040\r\nContent-Disposition:
+        form-data; name=\"email\"\r\n\r\n<EMAIL>\r\n-----------------------a8c569d85aff17cf2762fe0c944d494f1ad7ebc040\r\nContent-Disposition:
+        form-data; name=\"password\"\r\n\r\n<PASSWORD>\r\n-----------------------a8c569d85aff17cf2762fe0c944d494f1ad7ebc040--\r\n"
     headers:
       Accept:
       - application/json
       Connection:
       - close
       Content-Type:
-      - multipart/form-data; boundary=---------------------9dab9fab242324fe2ab2f27e58c1cde7f8233e58f0
+      - multipart/form-data; boundary=---------------------a8c569d85aff17cf2762fe0c944d494f1ad7ebc040
       Host:
       - svc.zesty.io
       User-Agent:
@@ -35,9 +35,9 @@ http_interactions:
       Content-Length:
       - '214'
       Etag:
-      - W/"d6-8UXQ0El4qgUdrR6ufKFcgkwcLlU"
+      - W/"d6-PlmJF4y/HmdsCC8c3HirT5Ay/og"
       Date:
-      - Tue, 24 Sep 2019 16:35:17 GMT
+      - Tue, 24 Sep 2019 18:16:55 GMT
       Via:
       - 1.1 google
       Alt-Svc:
@@ -46,9 +46,9 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: '{"message":"Logged in successfully.","status":"OK","data":{"data":"bd03ac25ef68013379d1aa539b7e216f6879dc68"},"meta":{"userZuid":"5-c6d69fadc2-b8k5kz","token":"<TOKEN>"},"code":200}'
+      string: '{"message":"Logged in successfully.","status":"OK","data":{"data":"065bb58688c58aa784979d8db7510cb707706ff7"},"meta":{"userZuid":"5-c6d69fadc2-b8k5kz","token":"<TOKEN>"},"code":200}'
     http_version: 
-  recorded_at: Tue, 24 Sep 2019 16:35:18 GMT
+  recorded_at: Tue, 24 Sep 2019 18:16:55 GMT
 - request:
     method: get
     uri: https://svc.zesty.io/auth/verify
@@ -82,7 +82,7 @@ http_interactions:
       Etag:
       - W/"6e-85UoZPBehXDBFXU3QEvQdy9Kbw0"
       Date:
-      - Tue, 24 Sep 2019 16:35:18 GMT
+      - Tue, 24 Sep 2019 18:16:55 GMT
       Via:
       - 1.1 google
       Alt-Svc:
@@ -93,5 +93,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"message":"Session valid","status":"OK","data":21475261,"meta":{"userZuid":"5-c6d69fadc2-b8k5kz"},"code":200}'
     http_version: 
-  recorded_at: Tue, 24 Sep 2019 16:35:18 GMT
+  recorded_at: Tue, 24 Sep 2019 18:16:55 GMT
 recorded_with: VCR 5.0.0

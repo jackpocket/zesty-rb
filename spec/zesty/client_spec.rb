@@ -12,12 +12,7 @@ RSpec.describe Zesty::Client do
   let(:model_zuid) { ENV["MODEL_ZUID"] }
   let(:item_zuid) { "7-b29aa3e7ee-0swr1f" }
 
-  let(:token) do
-    VCR.use_cassette("zesty/login_successful") do
-      auth = Zesty::Auth.new
-      auth.login(ENV["EMAIL"], ENV["PASSWORD"])[:meta][:token]
-    end
-  end
+  let(:token) { Zesty::Auth.get_token(ENV["EMAIL"], ENV["PASSWORD"]) }
 
   let(:client) { Zesty::Client.new(token, instance_zuid) }
 

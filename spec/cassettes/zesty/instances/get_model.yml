@@ -1,6 +1,55 @@
 ---
 http_interactions:
 - request:
+    method: post
+    uri: https://svc.zesty.io/auth/login
+    body:
+      encoding: UTF-8
+      string: "-----------------------db10ba9c392e7d08e3d8f7539f2761717679b87a4f\r\nContent-Disposition:
+        form-data; name=\"email\"\r\n\r\n<EMAIL>\r\n-----------------------db10ba9c392e7d08e3d8f7539f2761717679b87a4f\r\nContent-Disposition:
+        form-data; name=\"password\"\r\n\r\n<PASSWORD>\r\n-----------------------db10ba9c392e7d08e3d8f7539f2761717679b87a4f--\r\n"
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Type:
+      - multipart/form-data; boundary=---------------------db10ba9c392e7d08e3d8f7539f2761717679b87a4f
+      Host:
+      - svc.zesty.io
+      User-Agent:
+      - http.rb/4.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Origin
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Set-Cookie:
+      - APP_SID=<TOKEN>; Domain=.zesty.io; Path=/; Secure
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '214'
+      Etag:
+      - W/"d6-GdDJo2nAicrt+yx4guhCzKE+yiM"
+      Date:
+      - Tue, 24 Sep 2019 18:17:03 GMT
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"message":"Logged in successfully.","status":"OK","data":{"data":"7272bfde29c5d2b560e2711197bcc10b08e26531"},"meta":{"userZuid":"5-c6d69fadc2-b8k5kz","token":"<TOKEN>"},"code":200}'
+    http_version: 
+  recorded_at: Tue, 24 Sep 2019 18:17:03 GMT
+- request:
     method: get
     uri: https://<INSTANCE_ZUID>.api.zesty.io/v1/content/models/6-d08392dbc9-9gl4bk
     body:
@@ -23,7 +72,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2019 16:35:21 GMT
+      - Tue, 24 Sep 2019 18:17:03 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -45,10 +94,10 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"_meta":{"timestamp":"2019-09-24T16:35:21.716750749Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ZUID":"6-d08392dbc9-9gl4bk","masterZUID":"6-d08392dbc9-9gl4bk","parentZUID":"","description":"","label":"Featured
+      string: '{"_meta":{"timestamp":"2019-09-24T18:17:03.540721861Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ZUID":"6-d08392dbc9-9gl4bk","masterZUID":"6-d08392dbc9-9gl4bk","parentZUID":"","description":"","label":"Featured
         Jackpots","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"dataset","name":"featured_jackpots","sort":102,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-11T20:00:35Z","updatedAt":"2019-09-11T20:50:59Z"}}
 
 '
     http_version: 
-  recorded_at: Tue, 24 Sep 2019 16:35:21 GMT
+  recorded_at: Tue, 24 Sep 2019 18:17:03 GMT
 recorded_with: VCR 5.0.0

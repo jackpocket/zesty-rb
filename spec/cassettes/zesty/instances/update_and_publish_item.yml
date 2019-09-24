@@ -1,23 +1,22 @@
 ---
 http_interactions:
 - request:
-    method: put
-    uri: https://<INSTANCE_ZUID>.api.zesty.io/v1/content/models/6-d08392dbc9-9gl4bk/items/7-b29aa3e7ee-0swr1f?publish=true
+    method: post
+    uri: https://svc.zesty.io/auth/login
     body:
       encoding: UTF-8
-      string: '{"data":{"lottery_name":"New York Lotto","jackpot_amount":2300000,"next_drawing":"2019-09-26
-        02:59:00 UTC","primary_color":"#3281BB","jackpot":null,"display_order":3},"meta":{"listed":true,"masterZUID":"7-b29aa3e7ee-0swr1f"},"web":{}}'
+      string: "-----------------------ef61c4a9531bdce7a4f0f0c11cd3e87c8910306a4e\r\nContent-Disposition:
+        form-data; name=\"email\"\r\n\r\n<EMAIL>\r\n-----------------------ef61c4a9531bdce7a4f0f0c11cd3e87c8910306a4e\r\nContent-Disposition:
+        form-data; name=\"password\"\r\n\r\n<PASSWORD>\r\n-----------------------ef61c4a9531bdce7a4f0f0c11cd3e87c8910306a4e--\r\n"
     headers:
       Accept:
       - application/json
-      Authorization:
-      - Bearer <BEARER_TOKEN>
       Connection:
       - close
       Content-Type:
-      - application/json; charset=UTF-8
+      - multipart/form-data; boundary=---------------------ef61c4a9531bdce7a4f0f0c11cd3e87c8910306a4e
       Host:
-      - "<INSTANCE_ZUID>.api.zesty.io"
+      - svc.zesty.io
       User-Agent:
       - http.rb/4.1.1
   response:
@@ -25,34 +24,31 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Mon, 23 Sep 2019 19:41:42 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '143'
       Vary:
-      - Accept-Encoding
+      - Origin
       Access-Control-Allow-Credentials:
       - 'true'
-      Access-Control-Allow-Headers:
-      - Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization,
-        accept, origin, Cache-Control, X-Requested-With, X-Auth
-      Access-Control-Allow-Methods:
-      - PUT, POST, GET, PATCH, DELETE, OPTIONS
-      Access-Control-Allow-Origin:
-      - ''
+      Set-Cookie:
+      - APP_SID=<TOKEN>; Domain=.zesty.io; Path=/; Secure
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '214'
+      Etag:
+      - W/"d6-JHUOLJEoSPSrdWHOr92zimh1tP8"
+      Date:
+      - Tue, 24 Sep 2019 18:16:59 GMT
       Via:
       - 1.1 google
+      Alt-Svc:
+      - clear
       Connection:
       - close
     body:
-      encoding: ASCII-8BIT
-      string: '{"_meta":{"timestamp":"2019-09-23T19:41:42.305278978Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ZUID":"7-b29aa3e7ee-0swr1f"}}
-
-'
+      encoding: UTF-8
+      string: '{"message":"Logged in successfully.","status":"OK","data":{"data":"c3f11490c946d16bd186cf61df2a3014512f5618"},"meta":{"userZuid":"5-c6d69fadc2-b8k5kz","token":"<TOKEN>"},"code":200}'
     http_version: 
-  recorded_at: Mon, 23 Sep 2019 19:41:42 GMT
+  recorded_at: Tue, 24 Sep 2019 18:16:59 GMT
 - request:
     method: put
     uri: https://<INSTANCE_ZUID>.api.zesty.io/v1/content/models/6-d08392dbc9-9gl4bk/items/7-b29aa3e7ee-0swr1f
@@ -79,7 +75,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2019 16:35:26 GMT
+      - Tue, 24 Sep 2019 18:16:59 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -101,11 +97,11 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"_meta":{"timestamp":"2019-09-24T16:35:26.008573873Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ZUID":"7-b29aa3e7ee-0swr1f"}}
+      string: '{"_meta":{"timestamp":"2019-09-24T18:16:59.973809684Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ZUID":"7-b29aa3e7ee-0swr1f"}}
 
 '
     http_version: 
-  recorded_at: Tue, 24 Sep 2019 16:35:26 GMT
+  recorded_at: Tue, 24 Sep 2019 18:16:59 GMT
 - request:
     method: get
     uri: https://<INSTANCE_ZUID>.api.zesty.io/v1/content/models/6-d08392dbc9-9gl4bk/items/7-b29aa3e7ee-0swr1f
@@ -129,7 +125,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2019 16:35:26 GMT
+      - Tue, 24 Sep 2019 18:17:00 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -151,18 +147,18 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"_meta":{"timestamp":"2019-09-24T16:35:26.324300755Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"web":{"metaDescription":"","metaTitle":null,"metaLinkText":null,"metaKeywords":null,"parentZUID":null,"pathPart":null,"path":null,"sitemapPriority":0,"canonicalTagMode":0,"canonicalQueryParamWhitelist":null,"canonicalTagCustomValue":null,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-24T16:35:26Z","updatedAt":"2019-09-24T16:35:26Z"},"meta":{"ZUID":"7-b29aa3e7ee-0swr1f","masterZUID":"7-b29aa3e7ee-0swr1f","contentModelZUID":"6-d08392dbc9-9gl4bk","contentModelName":null,"sort":null,"listed":true,"version":60,"langID":1,"createdAt":"2019-09-12T20:20:06Z","updatedAt":"2019-09-24T16:35:25Z"},"siblings":{"en-US":"7-b29aa3e7ee-0swr1f"},"data":{"display_order":3,"jackpot_amount":2300000,"lottery_name":"New
+      string: '{"_meta":{"timestamp":"2019-09-24T18:17:00.202471426Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"web":{"metaDescription":"","metaTitle":null,"metaLinkText":null,"metaKeywords":null,"parentZUID":null,"pathPart":null,"path":null,"sitemapPriority":0,"canonicalTagMode":0,"canonicalQueryParamWhitelist":null,"canonicalTagCustomValue":null,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-24T18:17:00Z","updatedAt":"2019-09-24T18:17:00Z"},"meta":{"ZUID":"7-b29aa3e7ee-0swr1f","masterZUID":"7-b29aa3e7ee-0swr1f","contentModelZUID":"6-d08392dbc9-9gl4bk","contentModelName":null,"sort":null,"listed":true,"version":63,"langID":1,"createdAt":"2019-09-12T20:20:06Z","updatedAt":"2019-09-24T18:16:59Z"},"siblings":{"en-US":"7-b29aa3e7ee-0swr1f"},"data":{"display_order":3,"jackpot_amount":2300000,"lottery_name":"New
         York Lotto","next_drawing":"2019-09-26","primary_color":"#3281BB"}}}
 
 '
     http_version: 
-  recorded_at: Tue, 24 Sep 2019 16:35:26 GMT
+  recorded_at: Tue, 24 Sep 2019 18:17:00 GMT
 - request:
     method: post
     uri: https://svc.zesty.io/sites-service/<INSTANCE_ZUID>/content/items/7-b29aa3e7ee-0swr1f/publish-schedule
     body:
       encoding: UTF-8
-      string: '{"version_num":60}'
+      string: '{"version_num":63}'
     headers:
       Accept:
       - application/json
@@ -192,7 +188,7 @@ http_interactions:
       Cache-Control:
       - no-cache, private
       Date:
-      - Tue, 24 Sep 2019 16:35:26 GMT
+      - Tue, 24 Sep 2019 18:17:00 GMT
       X-Frame-Options:
       - SAMEORIGIN
       Via:
@@ -203,7 +199,7 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"message":"Published","data":{"item_zuid":"7-b29aa3e7ee-0swr1f","version_zuid":"9-dadc9ea9f2-f2lfwm","version_num":"60"}}'
+      string: '{"message":"Published","data":{"item_zuid":"7-b29aa3e7ee-0swr1f","version_zuid":"9-d69f8fefcd-jmkgd8","version_num":"63"}}'
     http_version: 
-  recorded_at: Tue, 24 Sep 2019 16:35:26 GMT
+  recorded_at: Tue, 24 Sep 2019 18:17:00 GMT
 recorded_with: VCR 5.0.0

@@ -1,6 +1,55 @@
 ---
 http_interactions:
 - request:
+    method: post
+    uri: https://svc.zesty.io/auth/login
+    body:
+      encoding: UTF-8
+      string: "-----------------------1f5218c152624a6161547c775b1fd429ad5dfc1abc\r\nContent-Disposition:
+        form-data; name=\"email\"\r\n\r\n<EMAIL>\r\n-----------------------1f5218c152624a6161547c775b1fd429ad5dfc1abc\r\nContent-Disposition:
+        form-data; name=\"password\"\r\n\r\n<PASSWORD>\r\n-----------------------1f5218c152624a6161547c775b1fd429ad5dfc1abc--\r\n"
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Type:
+      - multipart/form-data; boundary=---------------------1f5218c152624a6161547c775b1fd429ad5dfc1abc
+      Host:
+      - svc.zesty.io
+      User-Agent:
+      - http.rb/4.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Origin
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Set-Cookie:
+      - APP_SID=<TOKEN>; Domain=.zesty.io; Path=/; Secure
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '214'
+      Etag:
+      - W/"d6-XPQ2P02y/t0t5/VfVm69LeErkqc"
+      Date:
+      - Tue, 24 Sep 2019 18:17:02 GMT
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"message":"Logged in successfully.","status":"OK","data":{"data":"48190227be6b531cddd1c04a35a3bb7251151774"},"meta":{"userZuid":"5-c6d69fadc2-b8k5kz","token":"<TOKEN>"},"code":200}'
+    http_version: 
+  recorded_at: Tue, 24 Sep 2019 18:17:02 GMT
+- request:
     method: get
     uri: https://<INSTANCE_ZUID>.api.zesty.io/v1/content/models/6-d08392dbc9-9gl4bk/items
     body:
@@ -23,7 +72,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2019 16:35:22 GMT
+      - Tue, 24 Sep 2019 18:17:02 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -45,12 +94,12 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"_meta":{"timestamp":"2019-09-24T16:35:22.835092669Z","totalResults":3,"start":0,"offset":0,"limit":3},"data":[{"web":{"metaDescription":"","metaTitle":null,"metaLinkText":null,"metaKeywords":null,"parentZUID":null,"pathPart":null,"path":null,"sitemapPriority":0,"canonicalTagMode":0,"canonicalQueryParamWhitelist":null,"canonicalTagCustomValue":null,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-23T22:52:49Z","updatedAt":"2019-09-23T22:52:49Z"},"meta":{"ZUID":"7-b29aa3e7ee-0swr1f","masterZUID":"7-b29aa3e7ee-0swr1f","contentModelZUID":"6-d08392dbc9-9gl4bk","contentModelName":null,"sort":null,"listed":true,"version":58,"langID":1,"createdAt":"2019-09-12T20:20:06Z","updatedAt":"2019-09-23T22:52:49Z"},"siblings":{"en-US":"7-b29aa3e7ee-0swr1f"},"data":{"display_order":3,"jackpot_amount":2300000,"lottery_name":"New
+      string: '{"_meta":{"timestamp":"2019-09-24T18:17:02.470036241Z","totalResults":3,"start":0,"offset":0,"limit":3},"data":[{"web":{"metaDescription":"","metaTitle":null,"metaLinkText":null,"metaKeywords":null,"parentZUID":null,"pathPart":null,"path":null,"sitemapPriority":0,"canonicalTagMode":0,"canonicalQueryParamWhitelist":null,"canonicalTagCustomValue":null,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-24T18:17:01Z","updatedAt":"2019-09-24T18:17:01Z"},"meta":{"ZUID":"7-b29aa3e7ee-0swr1f","masterZUID":"7-b29aa3e7ee-0swr1f","contentModelZUID":"6-d08392dbc9-9gl4bk","contentModelName":null,"sort":null,"listed":true,"version":64,"langID":1,"createdAt":"2019-09-12T20:20:06Z","updatedAt":"2019-09-24T18:17:01Z"},"siblings":{"en-US":"7-b29aa3e7ee-0swr1f"},"data":{"display_order":3,"jackpot_amount":2300000,"lottery_name":"New
         York Lotto","next_drawing":"2019-09-26","primary_color":"#3281BB"}},{"web":{"metaDescription":"","metaTitle":"Mega
         Millions","metaLinkText":"Mega Millions","metaKeywords":null,"parentZUID":null,"pathPart":null,"path":null,"sitemapPriority":-1,"canonicalTagMode":1,"canonicalQueryParamWhitelist":null,"canonicalTagCustomValue":null,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-23T18:06:56Z","updatedAt":"2019-09-23T18:06:56Z"},"meta":{"ZUID":"7-e0ababc5e7-j1q973","masterZUID":"7-e0ababc5e7-j1q973","contentModelZUID":"6-d08392dbc9-9gl4bk","contentModelName":null,"sort":104,"listed":true,"version":6,"langID":1,"createdAt":"2019-09-11T20:06:40Z","updatedAt":"2019-09-23T18:06:56Z"},"siblings":{"en-US":"7-e0ababc5e7-j1q973"},"data":{"display_order":1,"jackpot_amount":192000000,"lottery_name":"Mega
         Millions","next_drawing":"2019-09-17","primary_color":"#fcce3f"}},{"web":{"metaDescription":"","metaTitle":"Powerball","metaLinkText":"Powerball","metaKeywords":null,"parentZUID":null,"pathPart":null,"path":null,"sitemapPriority":-1,"canonicalTagMode":1,"canonicalQueryParamWhitelist":null,"canonicalTagCustomValue":null,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-23T18:08:18Z","updatedAt":"2019-09-23T18:08:18Z"},"meta":{"ZUID":"7-f0b5f1f0aa-bzv5x0","masterZUID":"7-f0b5f1f0aa-bzv5x0","contentModelZUID":"6-d08392dbc9-9gl4bk","contentModelName":null,"sort":103,"listed":true,"version":6,"langID":1,"createdAt":"2019-09-11T20:04:15Z","updatedAt":"2019-09-23T18:08:18Z"},"siblings":{"en-US":"7-f0b5f1f0aa-bzv5x0"},"data":{"display_order":2,"jackpot_amount":70000000,"lottery_name":"Powerball","next_drawing":"2019-09-18","primary_color":"#e24d3b"}}]}
 
 '
     http_version: 
-  recorded_at: Tue, 24 Sep 2019 16:35:22 GMT
+  recorded_at: Tue, 24 Sep 2019 18:17:02 GMT
 recorded_with: VCR 5.0.0

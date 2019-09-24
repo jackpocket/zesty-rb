@@ -1,6 +1,55 @@
 ---
 http_interactions:
 - request:
+    method: post
+    uri: https://svc.zesty.io/auth/login
+    body:
+      encoding: UTF-8
+      string: "-----------------------b04d25538f84d8b78d2fd6ab4aba9ccd1e6515a774\r\nContent-Disposition:
+        form-data; name=\"email\"\r\n\r\n<EMAIL>\r\n-----------------------b04d25538f84d8b78d2fd6ab4aba9ccd1e6515a774\r\nContent-Disposition:
+        form-data; name=\"password\"\r\n\r\n<PASSWORD>\r\n-----------------------b04d25538f84d8b78d2fd6ab4aba9ccd1e6515a774--\r\n"
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Type:
+      - multipart/form-data; boundary=---------------------b04d25538f84d8b78d2fd6ab4aba9ccd1e6515a774
+      Host:
+      - svc.zesty.io
+      User-Agent:
+      - http.rb/4.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Origin
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Set-Cookie:
+      - APP_SID=<TOKEN>; Domain=.zesty.io; Path=/; Secure
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '214'
+      Etag:
+      - W/"d6-ptqIdsOL8aVdxTQNmc8/4HOLIdM"
+      Date:
+      - Tue, 24 Sep 2019 18:17:07 GMT
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"message":"Logged in successfully.","status":"OK","data":{"data":"b60a7b629af43fd660cc240b408ced68dc2a739e"},"meta":{"userZuid":"5-c6d69fadc2-b8k5kz","token":"<TOKEN>"},"code":200}'
+    http_version: 
+  recorded_at: Tue, 24 Sep 2019 18:17:07 GMT
+- request:
     method: get
     uri: https://<INSTANCE_ZUID>.api.zesty.io/v1/web/headtags
     body:
@@ -23,7 +72,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2019 16:39:12 GMT
+      - Tue, 24 Sep 2019 18:17:07 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -45,9 +94,9 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"_meta":{"timestamp":"2019-09-24T16:39:12.610969874Z","totalResults":0,"start":0,"offset":0,"limit":0},"data":[]}
+      string: '{"_meta":{"timestamp":"2019-09-24T18:17:07.942099593Z","totalResults":0,"start":0,"offset":0,"limit":0},"data":[]}
 
 '
     http_version: 
-  recorded_at: Tue, 24 Sep 2019 16:39:12 GMT
+  recorded_at: Tue, 24 Sep 2019 18:17:07 GMT
 recorded_with: VCR 5.0.0

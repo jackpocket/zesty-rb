@@ -5,16 +5,16 @@ http_interactions:
     uri: https://svc.zesty.io/auth/login
     body:
       encoding: UTF-8
-      string: "-----------------------c876dad277d481b597a2e01fbf487170af2e417610\r\nContent-Disposition:
-        form-data; name=\"email\"\r\n\r\n<EMAIL>\r\n-----------------------c876dad277d481b597a2e01fbf487170af2e417610\r\nContent-Disposition:
-        form-data; name=\"password\"\r\n\r\n<PASSWORD>\r\n-----------------------c876dad277d481b597a2e01fbf487170af2e417610--\r\n"
+      string: "-----------------------e6deae2d8b17914131ea3fd950da7bc7f981dc576e\r\nContent-Disposition:
+        form-data; name=\"email\"\r\n\r\n<EMAIL>\r\n-----------------------e6deae2d8b17914131ea3fd950da7bc7f981dc576e\r\nContent-Disposition:
+        form-data; name=\"password\"\r\n\r\n<PASSWORD>\r\n-----------------------e6deae2d8b17914131ea3fd950da7bc7f981dc576e--\r\n"
     headers:
       Accept:
       - application/json
       Connection:
       - close
       Content-Type:
-      - multipart/form-data; boundary=---------------------c876dad277d481b597a2e01fbf487170af2e417610
+      - multipart/form-data; boundary=---------------------e6deae2d8b17914131ea3fd950da7bc7f981dc576e
       Host:
       - svc.zesty.io
       User-Agent:
@@ -35,9 +35,9 @@ http_interactions:
       Content-Length:
       - '214'
       Etag:
-      - W/"d6-WcJn1gcbOniZFizHBAB/qdhqMao"
+      - W/"d6-ujs67m/V5LrZF2z0z6u2Sa/d6nk"
       Date:
-      - Tue, 24 Sep 2019 16:39:30 GMT
+      - Tue, 24 Sep 2019 18:16:56 GMT
       Via:
       - 1.1 google
       Alt-Svc:
@@ -46,7 +46,7 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: '{"message":"Logged in successfully.","status":"OK","data":{"data":"3df1c1d91d21a24ce2cc99b96c0a97b90554bf04"},"meta":{"userZuid":"5-c6d69fadc2-b8k5kz","token":"<TOKEN>"},"code":200}'
+      string: '{"message":"Logged in successfully.","status":"OK","data":{"data":"06404fc8871adbd57e7bc6dd2fcea6b1514295c3"},"meta":{"userZuid":"5-c6d69fadc2-b8k5kz","token":"<TOKEN>"},"code":200}'
     http_version: 
-  recorded_at: Tue, 24 Sep 2019 16:39:30 GMT
+  recorded_at: Tue, 24 Sep 2019 18:16:56 GMT
 recorded_with: VCR 5.0.0

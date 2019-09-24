@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://<INSTANCE_ZUID>.api.zesty.io/v1/content/models/6-d08392dbc9-9gl4bk/items/7-b29aa3e7ee-0swr1f
+    body:
+      encoding: UTF-8
+      string: '{"data":{"lottery_name":"New York Lotto","jackpot_amount":2300000,"next_drawing":"2019-09-26
+        02:59:00 UTC","primary_color":"#3281BB","jackpot":null,"display_order":3},"meta":{"listed":true,"masterZUID":"7-b29aa3e7ee-0swr1f"},"web":{}}'
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=UTF-8
+      Host:
+      - "<INSTANCE_ZUID>.api.zesty.io"
+      User-Agent:
+      - http.rb/4.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2019 16:35:24 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '143'
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization,
+        accept, origin, Cache-Control, X-Requested-With, X-Auth
+      Access-Control-Allow-Methods:
+      - PUT, POST, GET, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Via:
+      - 1.1 google
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"_meta":{"timestamp":"2019-09-24T16:35:24.892609726Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ZUID":"7-b29aa3e7ee-0swr1f"}}
+
+'
+    http_version: 
+  recorded_at: Tue, 24 Sep 2019 16:35:24 GMT
+recorded_with: VCR 5.0.0

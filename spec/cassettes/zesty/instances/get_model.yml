@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSTANCE_ZUID>.api.zesty.io/v1/content/models/6-d08392dbc9-9gl4bk
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Connection:
+      - close
+      Host:
+      - "<INSTANCE_ZUID>.api.zesty.io"
+      User-Agent:
+      - http.rb/4.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2019 16:35:21 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '544'
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization,
+        accept, origin, Cache-Control, X-Requested-With, X-Auth
+      Access-Control-Allow-Methods:
+      - PUT, POST, GET, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Via:
+      - 1.1 google
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"_meta":{"timestamp":"2019-09-24T16:35:21.716750749Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ZUID":"6-d08392dbc9-9gl4bk","masterZUID":"6-d08392dbc9-9gl4bk","parentZUID":"","description":"","label":"Featured
+        Jackpots","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"dataset","name":"featured_jackpots","sort":102,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-11T20:00:35Z","updatedAt":"2019-09-11T20:50:59Z"}}
+
+'
+    http_version: 
+  recorded_at: Tue, 24 Sep 2019 16:35:21 GMT
+recorded_with: VCR 5.0.0

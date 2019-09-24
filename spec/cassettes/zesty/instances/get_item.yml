@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSTANCE_ZUID>.api.zesty.io/v1/content/models/6-d08392dbc9-9gl4bk/items/7-b29aa3e7ee-0swr1f
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Connection:
+      - close
+      Host:
+      - "<INSTANCE_ZUID>.api.zesty.io"
+      User-Agent:
+      - http.rb/4.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2019 16:35:23 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '905'
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization,
+        accept, origin, Cache-Control, X-Requested-With, X-Auth
+      Access-Control-Allow-Methods:
+      - PUT, POST, GET, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Via:
+      - 1.1 google
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"_meta":{"timestamp":"2019-09-24T16:35:23.823464034Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"web":{"metaDescription":"","metaTitle":null,"metaLinkText":null,"metaKeywords":null,"parentZUID":null,"pathPart":null,"path":null,"sitemapPriority":0,"canonicalTagMode":0,"canonicalQueryParamWhitelist":null,"canonicalTagCustomValue":null,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-23T22:52:49Z","updatedAt":"2019-09-23T22:52:49Z"},"meta":{"ZUID":"7-b29aa3e7ee-0swr1f","masterZUID":"7-b29aa3e7ee-0swr1f","contentModelZUID":"6-d08392dbc9-9gl4bk","contentModelName":null,"sort":null,"listed":true,"version":58,"langID":1,"createdAt":"2019-09-12T20:20:06Z","updatedAt":"2019-09-23T22:52:49Z"},"siblings":{"en-US":"7-b29aa3e7ee-0swr1f"},"data":{"display_order":3,"jackpot_amount":2300000,"lottery_name":"New
+        York Lotto","next_drawing":"2019-09-26","primary_color":"#3281BB"}}}
+
+'
+    http_version: 
+  recorded_at: Tue, 24 Sep 2019 16:35:23 GMT
+recorded_with: VCR 5.0.0

@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSTANCE_ZUID>.api.zesty.io/v1/content/models
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Connection:
+      - close
+      Host:
+      - "<INSTANCE_ZUID>.api.zesty.io"
+      User-Agent:
+      - http.rb/4.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2019 16:35:20 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization,
+        accept, origin, Cache-Control, X-Requested-With, X-Auth
+      Access-Control-Allow-Methods:
+      - PUT, POST, GET, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Via:
+      - 1.1 google
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"_meta":{"timestamp":"2019-09-24T16:35:20.613451968Z","totalResults":9,"start":0,"offset":0,"limit":9},"data":[{"ZUID":"6-a0fa7c-gwxs6p","masterZUID":"6-a0fa7c-gwxs6p","parentZUID":"","description":null,"label":"Globals","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"dataset","name":"clippings","sort":1,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-08-28T19:14:00Z","updatedAt":"2019-08-28T19:14:00Z"},{"ZUID":"6-f8ec3c-gk32qf","masterZUID":"6-f8ec3c-gk32qf","parentZUID":null,"description":null,"label":"Homepage","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"templateset","name":"homepage","sort":1,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-08-28T19:14:03Z","updatedAt":"2019-08-28T19:14:03Z"},{"ZUID":"6-8a82ebdf82-z498zb","masterZUID":"6-8a82ebdf82-z498zb","parentZUID":"6-a0fa7c-gwxs6p","description":"Lottery
+        object","label":"Lottery","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"dataset","name":"lottery","sort":100,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-08-28T21:50:57Z","updatedAt":"2019-08-28T21:50:57Z"},{"ZUID":"6-cac888cbb8-vknw41","masterZUID":"6-cac888cbb8-vknw41","parentZUID":"7-f905a0-db8m8m","description":"","label":"Feature
+        Items","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"dataset","name":"feature_items","sort":101,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-08-29T15:39:40Z","updatedAt":"2019-08-29T15:47:31Z"},{"ZUID":"6-d08392dbc9-9gl4bk","masterZUID":"6-d08392dbc9-9gl4bk","parentZUID":"","description":"","label":"Featured
+        Jackpots","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"dataset","name":"featured_jackpots","sort":102,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-11T20:00:35Z","updatedAt":"2019-09-11T20:50:59Z"},{"ZUID":"6-a89cdc9bb3-xvt10g","masterZUID":"6-a89cdc9bb3-xvt10g","parentZUID":"7-84be87c698-bgbfnt","description":"","label":"Blog
+        Posts","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"pageset","name":"blog_posts","sort":105,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-19T14:31:13Z","updatedAt":"2019-09-19T14:31:48Z"},{"ZUID":"6-84dec3c795-kd5300","masterZUID":"6-84dec3c795-kd5300","parentZUID":"","description":"","label":"Blog
+        Home","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"templateset","name":"blog_home","sort":106,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-19T14:31:26Z","updatedAt":"2019-09-19T14:31:26Z"},{"ZUID":"6-d08de59d91-7fbw41","masterZUID":"6-d08de59d91-7fbw41","parentZUID":"","description":"","label":"Category
+        Home","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"templateset","name":"category_home","sort":109,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-19T14:56:55Z","updatedAt":"2019-09-19T14:56:55Z"},{"ZUID":"6-d28ba589dd-c6g2r7","masterZUID":"6-d28ba589dd-c6g2r7","parentZUID":"7-dac2f3df93-3w753l","description":"","label":"Categories","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"pageset","name":"categories","sort":111,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-19T14:57:22Z","updatedAt":"2019-09-19T14:57:22Z"}]}
+
+'
+    http_version: 
+  recorded_at: Tue, 24 Sep 2019 16:35:20 GMT
+recorded_with: VCR 5.0.0

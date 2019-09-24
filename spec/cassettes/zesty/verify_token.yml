@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://svc.zesty.io/auth/login
+    body:
+      encoding: UTF-8
+      string: "-----------------------9dab9fab242324fe2ab2f27e58c1cde7f8233e58f0\r\nContent-Disposition:
+        form-data; name=\"email\"\r\n\r\n<EMAIL>\r\n-----------------------9dab9fab242324fe2ab2f27e58c1cde7f8233e58f0\r\nContent-Disposition:
+        form-data; name=\"password\"\r\n\r\n<PASSWORD>\r\n-----------------------9dab9fab242324fe2ab2f27e58c1cde7f8233e58f0--\r\n"
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Type:
+      - multipart/form-data; boundary=---------------------9dab9fab242324fe2ab2f27e58c1cde7f8233e58f0
+      Host:
+      - svc.zesty.io
+      User-Agent:
+      - http.rb/4.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Origin
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Set-Cookie:
+      - APP_SID=<TOKEN>; Domain=.zesty.io; Path=/; Secure
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '214'
+      Etag:
+      - W/"d6-8UXQ0El4qgUdrR6ufKFcgkwcLlU"
+      Date:
+      - Tue, 24 Sep 2019 16:35:17 GMT
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"message":"Logged in successfully.","status":"OK","data":{"data":"bd03ac25ef68013379d1aa539b7e216f6879dc68"},"meta":{"userZuid":"5-c6d69fadc2-b8k5kz","token":"<TOKEN>"},"code":200}'
+    http_version: 
+  recorded_at: Tue, 24 Sep 2019 16:35:18 GMT
+- request:
+    method: get
+    uri: https://svc.zesty.io/auth/verify
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Connection:
+      - close
+      Host:
+      - svc.zesty.io
+      User-Agent:
+      - http.rb/4.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Origin
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '110'
+      Etag:
+      - W/"6e-85UoZPBehXDBFXU3QEvQdy9Kbw0"
+      Date:
+      - Tue, 24 Sep 2019 16:35:18 GMT
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"message":"Session valid","status":"OK","data":21475261,"meta":{"userZuid":"5-c6d69fadc2-b8k5kz"},"code":200}'
+    http_version: 
+  recorded_at: Tue, 24 Sep 2019 16:35:18 GMT
+recorded_with: VCR 5.0.0

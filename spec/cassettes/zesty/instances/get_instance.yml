@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://accounts.api.zesty.io/v1/instances/<INSTANCE_ZUID>
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Connection:
+      - close
+      Host:
+      - accounts.api.zesty.io
+      User-Agent:
+      - http.rb/4.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2019 16:35:19 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '533'
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization,
+        accept, origin, Cache-Control, X-Requested-With, X-Auth
+      Access-Control-Allow-Methods:
+      - PUT, POST, GET, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Via:
+      - 1.1 google
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"_meta":{"timestamp":"2019-09-24T16:35:19.257949038Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ID":8355883,"ZUID":"<INSTANCE_ZUID>","ecoID":null,"ecoZUID":null,"randomHashID":"2b8zbm48","domain":"jackpockettest3.zesty.site","name":"test3","planID":17,"cancelledReason":null,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","prefs":null,"blueprintID":1,"blueprintZUID":"14-64329e0-555644","requiresTwoFactor":0,"legacy":false,"screenshotURL":null,"createdAt":"2019-08-28T19:12:14Z","updatedAt":"2019-09-23T18:07:35Z"}}
+
+'
+    http_version: 
+  recorded_at: Tue, 24 Sep 2019 16:35:19 GMT
+recorded_with: VCR 5.0.0

@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Javier Julio"]
   spec.email         = ["jjfutbol@gmail.com"]
 
-  spec.summary       = %q{A Ruby wrapper for the Zesty CMS API}
-  spec.description   = %q{A Ruby wrapper for the Zesty CMS API}
+  spec.summary       = %q{A Ruby interface to the Zesty.io API}
+  spec.description   = %q{A Ruby interface to the Zesty.io API}
   spec.homepage      = "https://github.com/javierjulio/zesty-rb"
   spec.license       = "MIT"
 

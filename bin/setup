@@ -1,0 +1,13 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+bundle install
+
+echo "Enter your Zesty account credentials below."
+read -p 'Email: ' email
+read -p 'Password: ' password
+
+cp .env.sample .env
+sed -i '' -e "s/YOUR_EMAIL/$email/g" .env
+sed -i '' -e "s/YOUR_PASSWORD/$password/g" .env

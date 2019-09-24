@@ -9,4 +9,4 @@ before_install:
   - gem install bundler
 cache: bundler
 env:
-  - EMAIL="<EMAIL>" PASSWORD="<PASSWORD>" INSTANCE_ZUID="1-abc-def" MODEL_ZUID="6-d08392dbc9-9gl4bk"
+  - EMAIL="email" PASSWORD="password" INSTANCE_ZUID="1-abc-def" MODEL_ZUID="6-d08392dbc9-9gl4bk"

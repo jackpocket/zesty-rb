@@ -1,7 +1,7 @@
 ---
 language: ruby
 rvm:
-  - 2.4.6
+  # - 2.4.6 # TODO: separate gemfiles to account for ActiveSupport
   - 2.5.5
   - 2.6.3
 before_install:

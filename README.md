@@ -1,7 +1,7 @@
 # The Zesty.io Ruby Gem
 
 [![Gem Version](https://badge.fury.io/rb/zesty.svg)][gem]
-[![Build Status](https://travis-ci.org/javierjulio/zesty.svg?branch=master)][travis]
+[![Build Status](https://travis-ci.org/javierjulio/zesty-rb.svg?branch=master)][travis]
 
 A Ruby interface to the Zesty REST API. Requires Ruby 2.4 and up. Not all API actions are supported yet. Since the Zesty API uses mostly camelCase, this gem will handle converting to and from snake_case for you.
 
@@ -105,7 +105,7 @@ To release a new version, update the version number in `version.rb`, and then ru
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/zesty. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/javierjulio/zesty-rb. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -113,7 +113,7 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Zesty project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/zesty/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Zesty project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/javierjulio/zesty-rb/blob/master/CODE_OF_CONDUCT.md).
 
 [gem]: https://rubygems.org/gems/zesty
-[travis]: https://travis-ci.org/javierjulio/zesty
+[travis]: https://travis-ci.org/javierjulio/zesty-rb

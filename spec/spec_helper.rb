@@ -19,6 +19,8 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 
+  config.order = :random
+
   config.include RSpec::JsonExpectations::Matchers
 end
 

@@ -3,8 +3,6 @@ module Zesty
 
     AUTH_URL = "https://auth.api.zesty.io"
 
-    using Refinements::SnakeCase
-
     def self.get_token(email, password)
       self.new.login(email, password).dig(:meta, :token)
     end

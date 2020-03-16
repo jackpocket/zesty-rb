@@ -8,6 +8,10 @@ RSpec.describe Zesty::Client do
 
   let(:client) { Zesty::Client.new(token, instance_zuid) }
 
+  # TODO: split into API objects: client.account, client.instance, client.media
+  # TODO: Update test to create/delete instances. This is supported by the API:
+  # https://accounts-api.zesty.org/?version=latest#3803b0f6-3481-19d7-e211-1db25f8c1027
+
   describe '#get_instance' do
     it "returns an instance" do
       instance = VCR.use_cassette("zesty/instances/get_instance") do

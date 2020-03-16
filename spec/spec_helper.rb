@@ -4,9 +4,6 @@ require "zesty"
 require "vcr"
 require "webmock/rspec"
 require "rspec/json_expectations"
-require "active_support"
-require "active_support/core_ext/object/blank"
-require "active_support/core_ext/object/inclusion"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -43,3 +40,5 @@ VCR.configure do |c|
   end
 end
 
+AUTH_TOKEN_REGEX = /([a-zA-Z0-9]+)/
+TIMESTAMP_REGEX = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?Z/

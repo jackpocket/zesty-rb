@@ -8,7 +8,8 @@ RSpec.describe Zesty::Auth do
     end
 
     expect(result[:code]).to eq 200
-    expect(result[:meta][:token].present?).to eq true
+    expect(result[:meta][:token]).to be_instance_of(String)
+    expect(result[:meta][:token]).to_not be_empty
   end
 
   it "returns just a token for a successful auth" do
@@ -16,7 +17,8 @@ RSpec.describe Zesty::Auth do
       described_class.get_token(ENV["EMAIL"], ENV["PASSWORD"])
     end
 
-    expect(token.present?).to eq true
+    expect(token).to be_instance_of(String)
+    expect(token).to_not be_empty
   end
 
   it "fails for invalid auth" do
@@ -34,7 +36,8 @@ RSpec.describe Zesty::Auth do
     end
 
     expect(result[:code]).to eq 200
-    expect(result[:meta][:user_zuid].present?).to eq true
+    expect(result[:meta][:user_zuid]).to be_instance_of(String)
+    expect(result[:meta][:user_zuid]).to_not be_empty
   end
 
 end

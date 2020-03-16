@@ -16,7 +16,7 @@ RSpec.describe Zesty::Client do
 
       expect(instance).to include_json({
         _meta: {
-          timestamp: be_present,
+          timestamp: TIMESTAMP_REGEX,
           total_results: be_an(Integer),
           start: be_an(Integer),
           offset: be_an(Integer),
@@ -24,23 +24,23 @@ RSpec.describe Zesty::Client do
         },
         data: {
           id: be_an(Integer),
-          zuid: be_present,
+          zuid: be_a(String),
           eco_id: nil,
           eco_zuid: nil,
-          random_hash_id: be_present,
-          domain: be_present,
-          name: be_present,
+          random_hash_id: /([a-zA-Z0-9]+)/,
+          domain: be_a(String),
+          name: be_a(String),
           plan_id: be_an(Integer),
           cancelled_reason: nil,
-          created_by_user_zuid: be_present,
+          created_by_user_zuid: be_a(String),
           prefs: nil,
           blueprint_id: be_an(Integer),
-          blueprint_zuid: be_present,
-          requires_two_factor: be_in([0, 1]),
-          legacy: be_in([true, false]),
+          blueprint_zuid: be_a(String),
+          requires_two_factor: be_an(Integer),
+          legacy: /true|false/,
           screenshot_url: nil,
-          created_at: be_present,
-          updated_at: be_present
+          created_at: TIMESTAMP_REGEX,
+          updated_at: TIMESTAMP_REGEX
         }
       })
     end
@@ -54,7 +54,7 @@ RSpec.describe Zesty::Client do
 
       expect(models).to include_json({
         _meta: {
-          timestamp: be_present,
+          timestamp: TIMESTAMP_REGEX,
           total_results: be_an(Integer),
           start: be_an(Integer),
           offset: be_an(Integer),
@@ -62,21 +62,21 @@ RSpec.describe Zesty::Client do
         },
         data: UnorderedArray(
           {
-            zuid: be_present,
-            master_zuid: be_present,
+            zuid: be_a(String),
+            master_zuid: be_a(String),
             parent_zuid: be_a(String),
             description: nil,
-            label: be_present,
-            type: be_present,
-            name: be_present,
+            label: be_a(String),
+            type: be_a(String),
+            name: be_a(String),
             sort: be_an(Integer),
-            listed: be_in([true, false]),
+            listed: /true|false/,
             module: be_an(Integer),
             plugin: be_an(Integer),
-            created_by_user_zuid: be_present,
-            updated_by_user_zuid: be_present,
-            created_at: be_present,
-            updated_at: be_present
+            created_by_user_zuid: be_a(String),
+            updated_by_user_zuid: be_a(String),
+            created_at: TIMESTAMP_REGEX,
+            updated_at: TIMESTAMP_REGEX
           }
         )
       })
@@ -92,7 +92,7 @@ RSpec.describe Zesty::Client do
       pp model
       # expect(models).to include_json({
       #   _meta: {
-      #     timestamp: be_present,
+      #     timestamp: TIMESTAMP_REGEX,
       #     total_results: be_an(Integer),
       #     start: be_an(Integer),
       #     offset: be_an(Integer),
@@ -100,21 +100,21 @@ RSpec.describe Zesty::Client do
       #   },
       #   data: UnorderedArray(
       #     {
-      #       zuid: be_present,
-      #       master_zuid: be_present,
+      #       zuid: be_a(String),
+      #       master_zuid: be_a(String),
       #       parent_zuid: be_a(String),
       #       description: nil,
-      #       label: be_present,
-      #       type: be_present,
-      #       name: be_present,
+      #       label: be_a(String),
+      #       type: be_a(String),
+      #       name: be_a(String),
       #       sort: be_an(Integer),
-      #       listed: be_in([true, false]),
+      #       listed: /true|false/,
       #       module: be_an(Integer),
       #       plugin: be_an(Integer),
-      #       created_by_user_zuid: be_present,
-      #       updated_by_user_zuid: be_present,
-      #       created_at: be_present,
-      #       updated_at: be_present
+      #       created_by_user_zuid: be_a(String),
+      #       updated_by_user_zuid: be_a(String),
+      #       created_at: TIMESTAMP_REGEX,
+      #       updated_at: TIMESTAMP_REGEX
       #     }
       #   )
       # })
@@ -130,7 +130,7 @@ RSpec.describe Zesty::Client do
       pp model
       # expect(models).to include_json({
       #   _meta: {
-      #     timestamp: be_present,
+      #     timestamp: TIMESTAMP_REGEX,
       #     total_results: be_an(Integer),
       #     start: be_an(Integer),
       #     offset: be_an(Integer),
@@ -138,21 +138,21 @@ RSpec.describe Zesty::Client do
       #   },
       #   data: UnorderedArray(
       #     {
-      #       zuid: be_present,
-      #       master_zuid: be_present,
+      #       zuid: be_a(String),
+      #       master_zuid: be_a(String),
       #       parent_zuid: be_a(String),
       #       description: nil,
-      #       label: be_present,
-      #       type: be_present,
-      #       name: be_present,
+      #       label: be_a(String),
+      #       type: be_a(String),
+      #       name: be_a(String),
       #       sort: be_an(Integer),
-      #       listed: be_in([true, false]),
+      #       listed: /true|false/,
       #       module: be_an(Integer),
       #       plugin: be_an(Integer),
-      #       created_by_user_zuid: be_present,
-      #       updated_by_user_zuid: be_present,
-      #       created_at: be_present,
-      #       updated_at: be_present
+      #       created_by_user_zuid: be_a(String),
+      #       updated_by_user_zuid: be_a(String),
+      #       created_at: TIMESTAMP_REGEX,
+      #       updated_at: TIMESTAMP_REGEX
       #     }
       #   )
       # })

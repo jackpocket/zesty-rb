@@ -11,6 +11,7 @@ def client
   @client ||= begin
     puts "Signing in..."
     token = Zesty::Auth.get_token(ENV["EMAIL"], ENV["PASSWORD"])
+    puts "Token: #{token}"
     puts "Client authenticated."
     Zesty::Client.new(token, ENV["INSTANCE_ZUID"])
   end

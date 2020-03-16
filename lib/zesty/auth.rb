@@ -1,7 +1,7 @@
 module Zesty
   class Auth
 
-    AUTH_URL = "https://svc.zesty.io/auth"
+    AUTH_URL = "https://auth.api.zesty.io"
 
     using Refinements::SnakeCase
 

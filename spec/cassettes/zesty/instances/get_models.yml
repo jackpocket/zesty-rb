@@ -2,21 +2,21 @@
 http_interactions:
 - request:
     method: post
-    uri: https://svc.zesty.io/auth/login
+    uri: https://auth.api.zesty.io/login
     body:
       encoding: UTF-8
-      string: "-----------------------27695222616033bb1644d4f331b1b82809e2e47a26\r\nContent-Disposition:
-        form-data; name=\"email\"\r\n\r\n<EMAIL>\r\n-----------------------27695222616033bb1644d4f331b1b82809e2e47a26\r\nContent-Disposition:
-        form-data; name=\"password\"\r\n\r\n<PASSWORD>\r\n-----------------------27695222616033bb1644d4f331b1b82809e2e47a26--\r\n"
+      string: "-----------------------75b5ba7e57d72d4d8d205cecdab7d622e23e1b9684\r\nContent-Disposition:
+        form-data; name=\"email\"\r\n\r\n<EMAIL>\r\n-----------------------75b5ba7e57d72d4d8d205cecdab7d622e23e1b9684\r\nContent-Disposition:
+        form-data; name=\"password\"\r\n\r\n<PASSWORD>\r\n-----------------------75b5ba7e57d72d4d8d205cecdab7d622e23e1b9684--\r\n"
     headers:
       Accept:
       - application/json
       Connection:
       - close
       Content-Type:
-      - multipart/form-data; boundary=---------------------27695222616033bb1644d4f331b1b82809e2e47a26
+      - multipart/form-data; boundary=---------------------75b5ba7e57d72d4d8d205cecdab7d622e23e1b9684
       Host:
-      - svc.zesty.io
+      - auth.api.zesty.io
       User-Agent:
       - http.rb/4.1.1
   response:
@@ -24,31 +24,54 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Vary:
-      - Origin
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Set-Cookie:
-      - APP_SID=<TOKEN>; Domain=.zesty.io; Path=/; Secure
+      Date:
+      - Mon, 16 Mar 2020 16:20:45 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
       - '214'
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - DENY
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Surrogate-Control:
+      - no-store
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, proxy-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Referrer-Policy:
+      - no-referrer
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Set-Cookie:
+      - APP_SID=<TOKEN>; Domain=.zesty.io; Path=/; Secure
       Etag:
-      - W/"d6-fN0ia9e4ZSIVfeWPchlRA5gGVRo"
-      Date:
-      - Tue, 24 Sep 2019 18:17:04 GMT
+      - W/"d6-ORpUrjyQ6jSqQ1e4FjD7rs+CwFo"
       Via:
       - 1.1 google
-      Alt-Svc:
-      - clear
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"message":"Logged in successfully.","status":"OK","data":{"data":"ad10d3c705261e7248d516d23430e5bc228d45e5"},"meta":{"userZuid":"5-c6d69fadc2-b8k5kz","token":"<TOKEN>"},"code":200}'
+      string: '{"message":"Logged in successfully.","status":"OK","data":{"data":"<TOKEN>"},"meta":{"userZuid":"5-c6d69fadc2-b8k5kz","token":"<TOKEN>"},"code":200}'
     http_version: 
-  recorded_at: Tue, 24 Sep 2019 18:17:04 GMT
+  recorded_at: Mon, 16 Mar 2020 16:20:45 GMT
 - request:
     method: get
     uri: https://<INSTANCE_ZUID>.api.zesty.io/v1/content/models
@@ -72,7 +95,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2019 18:17:04 GMT
+      - Mon, 16 Mar 2020 16:20:45 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -88,21 +111,34 @@ http_interactions:
       - PUT, POST, GET, PATCH, DELETE, OPTIONS
       Access-Control-Allow-Origin:
       - ''
+      Content-Security-Policy:
+      - ''
+      Feature-Policy:
+      - ''
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - sameorigin
+      X-Permitted-Cross-Domain-Policies:
+      - ''
+      X-Xss-Protection:
+      - 1;mode=block
       Via:
       - 1.1 google
       Connection:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"_meta":{"timestamp":"2019-09-24T18:17:04.407901964Z","totalResults":9,"start":0,"offset":0,"limit":9},"data":[{"ZUID":"6-a0fa7c-gwxs6p","masterZUID":"6-a0fa7c-gwxs6p","parentZUID":"","description":null,"label":"Globals","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"dataset","name":"clippings","sort":1,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-08-28T19:14:00Z","updatedAt":"2019-08-28T19:14:00Z"},{"ZUID":"6-f8ec3c-gk32qf","masterZUID":"6-f8ec3c-gk32qf","parentZUID":null,"description":null,"label":"Homepage","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"templateset","name":"homepage","sort":1,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-08-28T19:14:03Z","updatedAt":"2019-08-28T19:14:03Z"},{"ZUID":"6-8a82ebdf82-z498zb","masterZUID":"6-8a82ebdf82-z498zb","parentZUID":"6-a0fa7c-gwxs6p","description":"Lottery
+      string: '{"_meta":{"timestamp":"2020-03-16T16:20:45.603284786Z","totalResults":11,"start":0,"offset":0,"limit":11},"data":[{"ZUID":"6-a0fa7c-gwxs6p","masterZUID":"6-a0fa7c-gwxs6p","parentZUID":"","description":null,"label":"Globals","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"dataset","name":"clippings","sort":1,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-08-28T19:14:00Z","updatedAt":"2019-08-28T19:14:00Z"},{"ZUID":"6-f8ec3c-gk32qf","masterZUID":"6-f8ec3c-gk32qf","parentZUID":null,"description":null,"label":"Homepage","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"templateset","name":"homepage","sort":1,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-08-28T19:14:03Z","updatedAt":"2019-08-28T19:14:03Z"},{"ZUID":"6-8a82ebdf82-z498zb","masterZUID":"6-8a82ebdf82-z498zb","parentZUID":"6-a0fa7c-gwxs6p","description":"Lottery
         object","label":"Lottery","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"dataset","name":"lottery","sort":100,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-08-28T21:50:57Z","updatedAt":"2019-08-28T21:50:57Z"},{"ZUID":"6-cac888cbb8-vknw41","masterZUID":"6-cac888cbb8-vknw41","parentZUID":"7-f905a0-db8m8m","description":"","label":"Feature
         Items","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"dataset","name":"feature_items","sort":101,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-08-29T15:39:40Z","updatedAt":"2019-08-29T15:47:31Z"},{"ZUID":"6-d08392dbc9-9gl4bk","masterZUID":"6-d08392dbc9-9gl4bk","parentZUID":"","description":"","label":"Featured
-        Jackpots","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"dataset","name":"featured_jackpots","sort":102,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-11T20:00:35Z","updatedAt":"2019-09-11T20:50:59Z"},{"ZUID":"6-a89cdc9bb3-xvt10g","masterZUID":"6-a89cdc9bb3-xvt10g","parentZUID":"7-84be87c698-bgbfnt","description":"","label":"Blog
-        Posts","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"pageset","name":"blog_posts","sort":105,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-19T14:31:13Z","updatedAt":"2019-09-19T14:31:48Z"},{"ZUID":"6-84dec3c795-kd5300","masterZUID":"6-84dec3c795-kd5300","parentZUID":"","description":"","label":"Blog
-        Home","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"templateset","name":"blog_home","sort":106,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-19T14:31:26Z","updatedAt":"2019-09-19T14:31:26Z"},{"ZUID":"6-d08de59d91-7fbw41","masterZUID":"6-d08de59d91-7fbw41","parentZUID":"","description":"","label":"Category
-        Home","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"templateset","name":"category_home","sort":109,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-19T14:56:55Z","updatedAt":"2019-09-19T14:56:55Z"},{"ZUID":"6-d28ba589dd-c6g2r7","masterZUID":"6-d28ba589dd-c6g2r7","parentZUID":"7-dac2f3df93-3w753l","description":"","label":"Categories","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"pageset","name":"categories","sort":111,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-19T14:57:22Z","updatedAt":"2019-09-19T14:57:22Z"}]}
+        Jackpots","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"dataset","name":"featured_jackpots","sort":102,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-11T20:00:35Z","updatedAt":"2019-09-11T20:50:59Z"},{"ZUID":"6-a89cdc9bb3-xvt10g","masterZUID":"6-a89cdc9bb3-xvt10g","parentZUID":"7-84be87c698-bgbfnt","description":"","label":"Articles","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"pageset","name":"articles","sort":105,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-19T14:31:13Z","updatedAt":"2019-10-02T19:07:36Z"},{"ZUID":"6-84dec3c795-kd5300","masterZUID":"6-84dec3c795-kd5300","parentZUID":"","description":"","label":"Blog","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"templateset","name":"blog","sort":106,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-19T14:31:26Z","updatedAt":"2019-10-02T19:08:04Z"},{"ZUID":"6-d08de59d91-7fbw41","masterZUID":"6-d08de59d91-7fbw41","parentZUID":"","description":"","label":"Category
+        Home","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"templateset","name":"category_home","sort":109,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-19T14:56:55Z","updatedAt":"2019-09-19T14:56:55Z"},{"ZUID":"6-d28ba589dd-c6g2r7","masterZUID":"6-d28ba589dd-c6g2r7","parentZUID":"7-84be87c698-bgbfnt","description":"","label":"Categories","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"pageset","name":"categories","sort":111,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-19T14:57:22Z","updatedAt":"2019-10-02T19:09:38Z"},{"ZUID":"6-e2858da488-khgk29","masterZUID":"6-e2858da488-khgk29","parentZUID":"7-f905a0-db8m8m","description":"","label":"Featured
+        Lotteries","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"dataset","name":"featured_lotteries","sort":114,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-24T20:39:43Z","updatedAt":"2019-09-24T20:39:43Z"},{"ZUID":"6-d887caea8b-v8qw41","masterZUID":"6-d887caea8b-v8qw41","parentZUID":"7-84be87c698-bgbfnt","description":"","label":"Subcategories","metaTitle":null,"metaDescription":null,"metaKeywords":null,"type":"pageset","name":"subcategories","sort":121,"listed":true,"module":0,"plugin":0,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-10-03T18:56:34Z","updatedAt":"2019-10-03T18:56:34Z"}]}
 
 '
     http_version: 
-  recorded_at: Tue, 24 Sep 2019 18:17:04 GMT
+  recorded_at: Mon, 16 Mar 2020 16:20:45 GMT
 recorded_with: VCR 5.0.0

@@ -2,21 +2,21 @@
 http_interactions:
 - request:
     method: post
-    uri: https://svc.zesty.io/auth/login
+    uri: https://auth.api.zesty.io/login
     body:
       encoding: UTF-8
-      string: "-----------------------9dfd748059306111d5447f9bc4b0174f696588d852\r\nContent-Disposition:
-        form-data; name=\"email\"\r\n\r\n<EMAIL>\r\n-----------------------9dfd748059306111d5447f9bc4b0174f696588d852\r\nContent-Disposition:
-        form-data; name=\"password\"\r\n\r\n<PASSWORD>\r\n-----------------------9dfd748059306111d5447f9bc4b0174f696588d852--\r\n"
+      string: "-----------------------a02c99219f2c64c8b7c60551adc8de49e9e7e73531\r\nContent-Disposition:
+        form-data; name=\"email\"\r\n\r\n<EMAIL>\r\n-----------------------a02c99219f2c64c8b7c60551adc8de49e9e7e73531\r\nContent-Disposition:
+        form-data; name=\"password\"\r\n\r\n<PASSWORD>\r\n-----------------------a02c99219f2c64c8b7c60551adc8de49e9e7e73531--\r\n"
     headers:
       Accept:
       - application/json
       Connection:
       - close
       Content-Type:
-      - multipart/form-data; boundary=---------------------9dfd748059306111d5447f9bc4b0174f696588d852
+      - multipart/form-data; boundary=---------------------a02c99219f2c64c8b7c60551adc8de49e9e7e73531
       Host:
-      - svc.zesty.io
+      - auth.api.zesty.io
       User-Agent:
       - http.rb/4.1.1
   response:
@@ -24,31 +24,54 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Vary:
-      - Origin
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Set-Cookie:
-      - APP_SID=<TOKEN>; Domain=.zesty.io; Path=/; Secure
+      Date:
+      - Mon, 16 Mar 2020 16:20:39 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
       - '214'
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - DENY
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Surrogate-Control:
+      - no-store
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, proxy-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Referrer-Policy:
+      - no-referrer
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Set-Cookie:
+      - APP_SID=<TOKEN>; Domain=.zesty.io; Path=/; Secure
       Etag:
-      - W/"d6-wJ59BKgIzKNeEVQl+QwNURJli8c"
-      Date:
-      - Tue, 24 Sep 2019 18:17:06 GMT
+      - W/"d6-EMwMQ2N3N0Mvr85NMQct78V3hJ0"
       Via:
       - 1.1 google
-      Alt-Svc:
-      - clear
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"message":"Logged in successfully.","status":"OK","data":{"data":"28f870da938733b361e7c8e076f096945bdafa64"},"meta":{"userZuid":"5-c6d69fadc2-b8k5kz","token":"<TOKEN>"},"code":200}'
+      string: '{"message":"Logged in successfully.","status":"OK","data":{"data":"<TOKEN>"},"meta":{"userZuid":"5-c6d69fadc2-b8k5kz","token":"<TOKEN>"},"code":200}'
     http_version: 
-  recorded_at: Tue, 24 Sep 2019 18:17:06 GMT
+  recorded_at: Mon, 16 Mar 2020 16:20:39 GMT
 - request:
     method: get
     uri: https://accounts.api.zesty.io/v1/instances/<INSTANCE_ZUID>
@@ -72,11 +95,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2019 18:17:06 GMT
+      - Mon, 16 Mar 2020 16:20:39 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '533'
+      - '634'
       Vary:
       - Accept-Encoding
       Access-Control-Allow-Credentials:
@@ -88,15 +111,29 @@ http_interactions:
       - PUT, POST, GET, PATCH, DELETE, OPTIONS
       Access-Control-Allow-Origin:
       - ''
+      Content-Security-Policy:
+      - ''
+      Feature-Policy:
+      - ''
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - sameorigin
+      X-Permitted-Cross-Domain-Policies:
+      - ''
+      X-Xss-Protection:
+      - 1;mode=block
       Via:
       - 1.1 google
       Connection:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"_meta":{"timestamp":"2019-09-24T18:17:06.849993466Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ID":8355883,"ZUID":"<INSTANCE_ZUID>","ecoID":null,"ecoZUID":null,"randomHashID":"2b8zbm48","domain":"jackpockettest3.zesty.site","name":"test3","planID":17,"cancelledReason":null,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","prefs":null,"blueprintID":1,"blueprintZUID":"14-64329e0-555644","requiresTwoFactor":0,"legacy":false,"screenshotURL":null,"createdAt":"2019-08-28T19:12:14Z","updatedAt":"2019-09-23T18:07:35Z"}}
+      string: '{"_meta":{"timestamp":"2020-03-16T16:20:39.872892874Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ID":8355883,"ZUID":"<INSTANCE_ZUID>","ecoID":null,"ecoZUID":null,"randomHashID":"2b8zbm48","domain":"jackpockettest3.zesty.site","name":"test3","planID":17,"cancelledReason":null,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","prefs":null,"blueprintID":1,"blueprintZUID":"14-64329e0-555644","requiresTwoFactor":0,"legacy":false,"screenshotURL":"https://storage.cloud.google.com/zesty-screenshots/screenshots/jackpockettest3.zesty.site_1920_1080.png","createdAt":"2019-08-28T19:12:14Z","updatedAt":"2020-02-26T00:30:14Z"}}
 
 '
     http_version: 
-  recorded_at: Tue, 24 Sep 2019 18:17:06 GMT
+  recorded_at: Mon, 16 Mar 2020 16:20:39 GMT
 recorded_with: VCR 5.0.0

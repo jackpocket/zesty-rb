@@ -2,21 +2,21 @@
 http_interactions:
 - request:
     method: post
-    uri: https://svc.zesty.io/auth/login
+    uri: https://auth.api.zesty.io/login
     body:
       encoding: UTF-8
-      string: "-----------------------d5ae209f5c823d137efacb8e5e6f9c68428a9031ff\r\nContent-Disposition:
-        form-data; name=\"email\"\r\n\r\n<EMAIL>\r\n-----------------------d5ae209f5c823d137efacb8e5e6f9c68428a9031ff\r\nContent-Disposition:
-        form-data; name=\"password\"\r\n\r\n<PASSWORD>\r\n-----------------------d5ae209f5c823d137efacb8e5e6f9c68428a9031ff--\r\n"
+      string: "-----------------------be877c848c4c4d52354aa3031cbaf22af198dca4e1\r\nContent-Disposition:
+        form-data; name=\"email\"\r\n\r\n<EMAIL>\r\n-----------------------be877c848c4c4d52354aa3031cbaf22af198dca4e1\r\nContent-Disposition:
+        form-data; name=\"password\"\r\n\r\n<PASSWORD>\r\n-----------------------be877c848c4c4d52354aa3031cbaf22af198dca4e1--\r\n"
     headers:
       Accept:
       - application/json
       Connection:
       - close
       Content-Type:
-      - multipart/form-data; boundary=---------------------d5ae209f5c823d137efacb8e5e6f9c68428a9031ff
+      - multipart/form-data; boundary=---------------------be877c848c4c4d52354aa3031cbaf22af198dca4e1
       Host:
-      - svc.zesty.io
+      - auth.api.zesty.io
       User-Agent:
       - http.rb/4.1.1
   response:
@@ -24,31 +24,54 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Vary:
-      - Origin
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Set-Cookie:
-      - APP_SID=<TOKEN>; Domain=.zesty.io; Path=/; Secure
+      Date:
+      - Mon, 16 Mar 2020 16:20:43 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
       - '214'
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - DENY
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Surrogate-Control:
+      - no-store
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, proxy-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Referrer-Policy:
+      - no-referrer
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Set-Cookie:
+      - APP_SID=<TOKEN>; Domain=.zesty.io; Path=/; Secure
       Etag:
-      - W/"d6-RI96CY9eyCON7nIxXhrtHe3orl0"
-      Date:
-      - Tue, 24 Sep 2019 18:17:05 GMT
+      - W/"d6-c6gwDCztRLSzf2QBIjxKkiyhs5k"
       Via:
       - 1.1 google
-      Alt-Svc:
-      - clear
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"message":"Logged in successfully.","status":"OK","data":{"data":"07bcfa3b78d5d8db0b2120cff62eb7f769e5b451"},"meta":{"userZuid":"5-c6d69fadc2-b8k5kz","token":"<TOKEN>"},"code":200}'
+      string: '{"message":"Logged in successfully.","status":"OK","data":{"data":"<TOKEN>"},"meta":{"userZuid":"5-c6d69fadc2-b8k5kz","token":"<TOKEN>"},"code":200}'
     http_version: 
-  recorded_at: Tue, 24 Sep 2019 18:17:05 GMT
+  recorded_at: Mon, 16 Mar 2020 16:20:43 GMT
 - request:
     method: post
     uri: https://<INSTANCE_ZUID>.api.zesty.io/v1/web/headtags
@@ -74,7 +97,7 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Tue, 24 Sep 2019 18:17:05 GMT
+      - Mon, 16 Mar 2020 16:20:44 GMT
       Content-Type:
       - text/plain; charset=utf-8
       Content-Length:
@@ -88,20 +111,34 @@ http_interactions:
       - PUT, POST, GET, PATCH, DELETE, OPTIONS
       Access-Control-Allow-Origin:
       - ''
+      Content-Security-Policy:
+      - ''
+      Feature-Policy:
+      - ''
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - sameorigin
+      X-Permitted-Cross-Domain-Policies:
+      - ''
+      X-Xss-Protection:
+      - 1;mode=block
       Via:
       - 1.1 google
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"_meta":{"timestamp":"2019-09-24T18:17:05.519480278Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ZUID":"21-cefd83a3f7-rv0f7h","type":"link","attributes":{"data-manual":true,"href":"favicon-64.png","rel":"icon","type":"image/png"},"resourceZUID":"<INSTANCE_ZUID>","sort":1,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-24T18:17:05.511141938Z","updatedAt":"2019-09-24T18:17:05.511147679Z"}}
+      string: '{"_meta":{"timestamp":"2020-03-16T16:20:44.159873514Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ZUID":"21-b8efa0c8a0-9kh39f","type":"link","attributes":{"data-manual":true,"href":"favicon-64.png","rel":"icon","type":"image/png"},"resourceZUID":"<INSTANCE_ZUID>","sort":1,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2020-03-16T16:20:44.153006413Z","updatedAt":"2020-03-16T16:20:44.153014009Z"}}
 
 '
     http_version: 
-  recorded_at: Tue, 24 Sep 2019 18:17:05 GMT
+  recorded_at: Mon, 16 Mar 2020 16:20:44 GMT
 - request:
     method: delete
-    uri: https://<INSTANCE_ZUID>.api.zesty.io/v1/web/headtags/21-cefd83a3f7-rv0f7h
+    uri: https://<INSTANCE_ZUID>.api.zesty.io/v1/web/headtags/21-b8efa0c8a0-9kh39f
     body:
       encoding: UTF-8
       string: ''
@@ -122,11 +159,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2019 18:17:05 GMT
+      - Mon, 16 Mar 2020 16:20:44 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '448'
+      - '447'
       Vary:
       - Accept-Encoding
       Access-Control-Allow-Credentials:
@@ -138,15 +175,29 @@ http_interactions:
       - PUT, POST, GET, PATCH, DELETE, OPTIONS
       Access-Control-Allow-Origin:
       - ''
+      Content-Security-Policy:
+      - ''
+      Feature-Policy:
+      - ''
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - sameorigin
+      X-Permitted-Cross-Domain-Policies:
+      - ''
+      X-Xss-Protection:
+      - 1;mode=block
       Via:
       - 1.1 google
       Connection:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"_meta":{"timestamp":"2019-09-24T18:17:05.793996576Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ZUID":"21-cefd83a3f7-rv0f7h","type":"link","attributes":{"data-manual":true,"href":"favicon-64.png","rel":"icon","type":"image/png"},"resourceZUID":"<INSTANCE_ZUID>","sort":1,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2019-09-24T18:17:05Z","updatedAt":"2019-09-24T18:17:05Z"}}
+      string: '{"_meta":{"timestamp":"2020-03-16T16:20:44.60492548Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ZUID":"21-b8efa0c8a0-9kh39f","type":"link","attributes":{"data-manual":true,"href":"favicon-64.png","rel":"icon","type":"image/png"},"resourceZUID":"<INSTANCE_ZUID>","sort":1,"createdByUserZUID":"5-c6d69fadc2-b8k5kz","updatedByUserZUID":"5-c6d69fadc2-b8k5kz","createdAt":"2020-03-16T16:20:44Z","updatedAt":"2020-03-16T16:20:44Z"}}
 
 '
     http_version: 
-  recorded_at: Tue, 24 Sep 2019 18:17:05 GMT
+  recorded_at: Mon, 16 Mar 2020 16:20:44 GMT
 recorded_with: VCR 5.0.0

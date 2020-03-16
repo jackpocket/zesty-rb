@@ -38,7 +38,7 @@ RSpec.describe Zesty::Client do
           blueprint_zuid: be_a(String),
           requires_two_factor: be_an(Integer),
           legacy: /true|false/,
-          screenshot_url: nil,
+          screenshot_url: be_a(String),
           created_at: TIMESTAMP_REGEX,
           updated_at: TIMESTAMP_REGEX
         }

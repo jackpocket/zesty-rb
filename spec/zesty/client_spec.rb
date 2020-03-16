@@ -1,13 +1,5 @@
 RSpec.describe Zesty::Client do
 
-  before do
-    turn_on_vcr!
-  end
-
-  after do
-    turn_off_vcr!
-  end
-
   let(:instance_zuid) { ENV["INSTANCE_ZUID"] }
   let(:model_zuid) { ENV["MODEL_ZUID"] }
   let(:item_zuid) { "7-b29aa3e7ee-0swr1f" }

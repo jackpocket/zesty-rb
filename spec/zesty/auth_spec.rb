@@ -1,13 +1,5 @@
 RSpec.describe Zesty::Auth do
 
-  before do
-    turn_on_vcr!
-  end
-
-  after do
-    turn_off_vcr!
-  end
-
   let(:auth) { described_class.new }
 
   it "is successful for a valid auth" do

@@ -3,7 +3,7 @@
 [![Gem Version](https://badge.fury.io/rb/zesty.svg)][gem]
 ![CI Build](https://github.com/javierjulio/zesty-rb/workflows/CI%20Build/badge.svg)
 
-A Ruby interface to the Zesty REST API. Requires Ruby 2.4 and up. Not all API actions are supported yet. Since the Zesty API uses mostly camelCase, this gem will handle converting to and from snake_case for you.
+A Ruby interface to [the Zesty REST API](https://zesty.org/apis/instant-content-api). Requires Ruby 2.4 and up. Not all API actions are supported yet. Since the Zesty API uses mostly camelCase, this gem will handle converting to and from snake_case for you.
 
 ## Installation
 
@@ -97,7 +97,7 @@ All code is written in snake_case since requests and responses are converted to 
 
 ### Tests
 
-Run `rspec` or to re-record VCR cassettes use `RECORD_MODE=all rspec`.
+To run tests use `rspec`. To re-record VCR cassettes use `RECORD_MODE=all rspec` or with specific test cases.
 
 ### Releasing
 

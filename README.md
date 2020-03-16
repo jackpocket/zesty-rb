@@ -1,7 +1,7 @@
 # The Zesty.io Ruby Gem
 
 [![Gem Version](https://badge.fury.io/rb/zesty.svg)][gem]
-[![Build Status](https://travis-ci.org/javierjulio/zesty-rb.svg?branch=master)][travis]
+![CI Build](https://github.com/javierjulio/zesty-rb/workflows/CI%20Build/badge.svg)
 
 A Ruby interface to the Zesty REST API. Requires Ruby 2.4 and up. Not all API actions are supported yet. Since the Zesty API uses mostly camelCase, this gem will handle converting to and from snake_case for you.
 
@@ -116,4 +116,3 @@ The gem is available as open source under the terms of the [MIT License](https:/
 Everyone interacting in the Zesty project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/javierjulio/zesty-rb/blob/master/CODE_OF_CONDUCT.md).
 
 [gem]: https://rubygems.org/gems/zesty
-[travis]: https://travis-ci.org/javierjulio/zesty-rb

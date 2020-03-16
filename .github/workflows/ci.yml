@@ -44,7 +44,7 @@ jobs:
       env:
         EMAIL: email
         PASSWORD: password
-        INSTANCE_ZUID: 123abc
-        MODEL_ZUID: 234bcd
+        INSTANCE_ZUID: ${{ secrets.INSTANCE_ZUID }}
+        MODEL_ZUID: ${{ secrets.MODEL_ZUID }}
       run: |
         bundle exec rake

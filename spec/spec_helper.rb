@@ -21,12 +21,10 @@ RSpec.configure do |config|
   config.include RSpec::JsonExpectations::Matchers
 end
 
-RECORD_MODE = (ENV['RECORD_MODE'] || 'once').to_sym
-
 VCR.configure do |c|
   c.cassette_library_dir = "spec/cassettes"
   c.hook_into :webmock
-  c.default_cassette_options = { record: RECORD_MODE }
+  c.default_cassette_options = { record: (ENV['RECORD_MODE'] || :once).to_sym }
   c.filter_sensitive_data('<EMAIL>') { ENV['EMAIL'] }
   c.filter_sensitive_data('<PASSWORD>') { ENV['PASSWORD'] }
   c.filter_sensitive_data('<INSTANCE_ZUID>') { ENV['INSTANCE_ZUID'] }

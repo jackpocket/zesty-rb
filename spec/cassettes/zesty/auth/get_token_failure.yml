@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.api.zesty.io/login
+    body:
+      encoding: UTF-8
+      string: "-----------------------37354ae6df60b96f1e53eb7b77263a9c08ec60f4ad\r\nContent-Disposition:
+        form-data; name=\"email\"\r\n\r\n<EMAIL>\r\n-----------------------37354ae6df60b96f1e53eb7b77263a9c08ec60f4ad\r\nContent-Disposition:
+        form-data; name=\"password\"\r\n\r\ninvalid\r\n-----------------------37354ae6df60b96f1e53eb7b77263a9c08ec60f4ad--\r\n"
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Type:
+      - multipart/form-data; boundary=---------------------37354ae6df60b96f1e53eb7b77263a9c08ec60f4ad
+      Host:
+      - auth.api.zesty.io
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Wed, 01 Jul 2020 17:16:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '99'
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - DENY
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Surrogate-Control:
+      - no-store
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, proxy-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Referrer-Policy:
+      - no-referrer
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Vary:
+      - Origin
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Etag:
+      - W/"63-0lmv24dxo3AgRNajf4NByiJYpyc"
+      Via:
+      - 1.1 google
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"message":"Invalid username or password","status":"Unauthorized","data":null,"meta":{},"code":401}'
+  recorded_at: Wed, 01 Jul 2020 17:16:29 GMT
+recorded_with: VCR 6.0.0

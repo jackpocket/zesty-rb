@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://auth.api.zesty.io/verify
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Connection:
+      - close
+      Host:
+      - auth.api.zesty.io
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Wed, 01 Jul 2020 15:53:18 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '81'
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - DENY
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Surrogate-Control:
+      - no-store
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, proxy-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Referrer-Policy:
+      - no-referrer
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Vary:
+      - Origin
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Etag:
+      - W/"51-0ks0VWdVJcxrhFmIR7FLHCKPB/w"
+      Via:
+      - 1.1 google
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"message":"No Session","status":"Unauthorized","data":null,"meta":{},"code":401}'
+  recorded_at: Wed, 01 Jul 2020 15:53:19 GMT
+recorded_with: VCR 6.0.0

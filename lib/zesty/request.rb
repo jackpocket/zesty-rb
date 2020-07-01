@@ -75,9 +75,7 @@ module Zesty
 
     def parse_response_body(body)
       return nil if body.strip.empty?
-      json = JSON.parse(body, symbolize_names: true)
-      #pp json
-      json&.to_snake_case
+      JSON.parse(body, symbolize_names: true)&.to_snake_case
     rescue JSON::ParserError
     end
 

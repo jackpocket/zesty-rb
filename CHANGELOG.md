@@ -1,6 +1,10 @@
 Changelog
 =========
 
+## 0.2.0 (2019-07-01)
+
+* Updated API Auth URL to `https://auth.api.zesty.io` (#1)
+
 ## 0.1.0 (2019-09-24)
 
 * Initial release to RubyGems

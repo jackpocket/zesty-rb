@@ -1,0 +1,22 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "12:00"
+    timezone: America/New_York
+  open-pull-requests-limit: 99
+  allow:
+  - dependency-type: direct
+  - dependency-type: indirect
+  ignore:
+  - dependency-name: webmock
+    versions:
+    - 3.11.3
+  - dependency-name: rspec-mocks
+    versions:
+    - 3.10.2
+  - dependency-name: rspec-support
+    versions:
+    - 3.10.2

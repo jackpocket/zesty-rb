@@ -6,19 +6,19 @@ Gem::Specification.new do |spec|
   spec.name          = "zesty"
   spec.version       = Zesty::VERSION
   spec.authors       = ["Javier Julio"]
-  spec.email         = ["jjfutbol@gmail.com"]
+  spec.email         = ["javier@jackpocket.com"]
 
   spec.summary       = %q{A Ruby interface to the Zesty.io API}
   spec.description   = %q{A Ruby interface to the Zesty.io API}
-  spec.homepage      = "https://github.com/javierjulio/zesty-rb"
+  spec.homepage      = "https://github.com/jackpocket/zesty-rb"
   spec.license       = "MIT"
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
-  spec.metadata["changelog_uri"] = "https://github.com/javierjulio/zesty-rb/blob/master/CHANGELOG.md"
-  spec.metadata["bug_tracker_uri"] = "https://github.com/javierjulio/zesty-rb/issues"
+  spec.metadata["changelog_uri"] = "https://github.com/jackpocket/zesty-rb/blob/master/CHANGELOG.md"
+  spec.metadata["bug_tracker_uri"] = "https://github.com/jackpocket/zesty-rb/issues"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

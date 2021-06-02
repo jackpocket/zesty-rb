@@ -1,6 +1,10 @@
 Changelog
 =========
 
+## Unreleased
+
+* No code changes - moved repository to Jackpocket organization and updated URLs
+
 ## 0.2.0 (2019-07-01)
 
 * Updated API Auth URL to `https://auth.api.zesty.io` (#1)

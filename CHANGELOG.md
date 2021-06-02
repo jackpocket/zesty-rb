@@ -1,7 +1,7 @@
 Changelog
 =========
 
-## Unreleased
+## 0.2.1 (2021-06-02)
 
 * No code changes - moved repository to Jackpocket organization and updated URLs
 

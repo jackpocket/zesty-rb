@@ -21,6 +21,7 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run Tests
       env:
+        RUBYOPT: "-W:deprecated"
         EMAIL: email
         PASSWORD: password
         INSTANCE_ZUID: ${{ secrets.INSTANCE_ZUID }}

@@ -7,6 +7,7 @@ module Zesty
       get_model: "https://%{instance_zuid}.api.zesty.io/v1/content/models/%{model_zuid}",
       get_items: "https://%{instance_zuid}.api.zesty.io/v1/content/models/%{model_zuid}/items",
       get_item: "https://%{instance_zuid}.api.zesty.io/v1/content/models/%{model_zuid}/items/%{item_zuid}",
+      create_item: "https://%{instance_zuid}.api.zesty.io/v1/content/models/%{model_zuid}/items",
       update_item: "https://%{instance_zuid}.api.zesty.io/v1/content/models/%{model_zuid}/items/%{item_zuid}",
       get_head_tags: "https://%{instance_zuid}.api.zesty.io/v1/web/headtags",
       create_head_tag: "https://%{instance_zuid}.api.zesty.io/v1/web/headtags",
@@ -41,6 +42,19 @@ module Zesty
 
     def get_item(model_zuid, item_zuid)
       Request.get(url_for(:get_item, model_zuid: model_zuid, item_zuid: item_zuid), headers: { authorization: "Bearer #{@token}" })
+    end
+
+    def create_item(model_zuid, parent_zuid="0", data:, web: {})
+      Request.post(
+        url_for(:create_item, model_zuid: model_zuid, parent_zuid: parent_zuid),
+        params: {
+          web: web.merge(parentZUID: parent_zuid).to_camel_case,
+          data: data
+        },
+        headers: {
+          authorization: "Bearer #{@token}"
+        }
+      )
     end
 
     def update_item(model_zuid, item_zuid, publish: false, data:, meta:, web: {})

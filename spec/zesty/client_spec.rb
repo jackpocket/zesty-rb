@@ -3,7 +3,6 @@ RSpec.describe Zesty::Client do
   let(:instance_zuid) { ENV["INSTANCE_ZUID"] }
   let(:model_zuid) { ENV["MODEL_ZUID"] }
   let(:item_zuid) { "7-b29aa3e7ee-0swr1f" }
-  let(:parent_zuid) { "6-948fb2a6a4-hzsqk1" }
 
   let(:token) { Zesty::Auth.get_token(ENV["EMAIL"], ENV["PASSWORD"]) }
 

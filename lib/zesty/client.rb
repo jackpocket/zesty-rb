@@ -44,11 +44,11 @@ module Zesty
       Request.get(url_for(:get_item, model_zuid: model_zuid, item_zuid: item_zuid), headers: { authorization: "Bearer #{@token}" })
     end
 
-    def create_item(model_zuid, parent_zuid="0", data:, web: {})
+    def create_item(model_zuid, data:, web: {})
       Request.post(
-        url_for(:create_item, model_zuid: model_zuid, parent_zuid: parent_zuid),
+        url_for(:create_item, model_zuid: model_zuid),
         params: {
-          web: web.merge(parentZUID: parent_zuid).to_camel_case,
+          web: web.to_camel_case,
           data: data
         },
         headers: {

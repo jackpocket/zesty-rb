@@ -176,48 +176,24 @@ RSpec.describe Zesty::Client do
 
   describe '#create_item' do
     it "creates an item successfully" do
-      model = VCR.use_cassette("zesty/instances/create_item") do
+      item = VCR.use_cassette("zesty/instances/create_item") do
         result = client.create_item(
           model_zuid,
-          parent_zuid,
           web: {
-            metaTitle: "Example Only",
-            metaLinkText: "Example Link Text",
-            pathPart: "example-only"
+            meta_title: "Example Only",
+            meta_link_text: "Example Link Text",
           },
           data: {
-            event_details_title: "postman test only",
-            charity_name: "postman test",
-            sweepstakes_datetime: "September 28 5PM",
-            event_entry_start_date: "August 15, 2023",
-            event_entry_start_time: "3:00:00 PM",
-            event_stream_start_date: "December 21, 2023",
-            event_stream_start_time: "2:59:59 PM",
-            event_drawing_date: "December 23, 2034",
-            event_drawing_time: "5:00:00 PM",
-            event_reveal_date: "December 24, 2034",
-            event_reveal_time: "6:00:00 PM",
-            donation_increment_title: "two",
-            donation_increment_amount: 2,
-            drawing_1_winning_pattern_name: "Line",
-            drawing_1_winning_pattern_description: "five (5) Clicked Numbers in any straight line on a Card",
-            drawing_1_prize_amount: 50,
-            drawing_1_prize_text: "fifty",
-            drawing_2_winning_pattern_name: "Stamp",
-            drawing_2_winning_pattern_description: "sixteen (16) Clicked Numbers around the edges of a Card",
-            drawing_2_prize_amount: 30,
-            drawing_2_prize_text: "thirty",
-            drawing_3_winning_pattern_name: "Corners",
-            drawing_3_winning_pattern_description: "twenty-five (25) Clicked Numbers on a Card",
-            drawing_3_prize_amount: 100,
-            drawing_3_prize_text: "one hundred",
-            drawings_total_prize_text: "five thousand five hundred fifty",
-            drawings_total_prize_amount: "5,550"
+            display_order: 4,
+            lottery_name: "Test Lottery",
+            jackpot_amount: 5_000_000,
+            next_drawing: "2024-01-26",
+            primary_color: "#ff0000"
           }
         )
       end
 
-      pp model
+      pp item
     end
   end
 

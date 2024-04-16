@@ -6,7 +6,7 @@ updates:
     interval: daily
     time: "12:00"
     timezone: America/New_York
-  open-pull-requests-limit: 99
+  open-pull-requests-limit: 10
   allow:
   - dependency-type: direct
   - dependency-type: indirect
@@ -16,4 +16,4 @@ updates:
     interval: daily
     time: "12:00"
     timezone: America/New_York
-  open-pull-requests-limit: 99
+  open-pull-requests-limit: 10

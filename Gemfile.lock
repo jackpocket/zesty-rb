@@ -38,7 +38,7 @@ GEM
       rake (~> 13.0)
     public_suffix (5.0.5)
     rake (13.2.1)
-    rexml (3.2.9)
+    rexml (3.3.0)
       strscan
     rspec (3.13.0)
       rspec-core (~> 3.13.0)

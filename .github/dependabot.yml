@@ -1,19 +1,19 @@
 version: 2
 updates:
-- package-ecosystem: bundler
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "12:00"
-    timezone: America/New_York
-  open-pull-requests-limit: 10
-  allow:
-  - dependency-type: direct
-  - dependency-type: indirect
-- package-ecosystem: github-actions
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "12:00"
-    timezone: America/New_York
-  open-pull-requests-limit: 10
+  - package-ecosystem: bundler
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "12:00"
+      timezone: America/New_York
+    open-pull-requests-limit: 10
+    allow:
+      - dependency-type: direct
+      - dependency-type: indirect
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "12:00"
+      timezone: America/New_York
+    open-pull-requests-limit: 10

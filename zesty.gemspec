@@ -1,19 +1,15 @@
-lib = File.expand_path("lib", __dir__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "zesty/version"
+require_relative "lib/zesty/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "zesty"
-  spec.version       = Zesty::VERSION
-  spec.authors       = ["Javier Julio"]
-  spec.email         = ["javier@jackpocket.com"]
+  spec.name = "zesty"
+  spec.version = Zesty::VERSION
+  spec.authors = ["Javier Julio"]
+  spec.email = ["javier@jackpocket.com"]
 
-  spec.summary       = %q{A Ruby interface to the Zesty.io API}
-  spec.description   = %q{A Ruby interface to the Zesty.io API}
-  spec.homepage      = "https://github.com/jackpocket/zesty-rb"
-  spec.license       = "MIT"
-
-  # spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+  spec.summary = "A Ruby interface to the Zesty.io API"
+  spec.description = "A Ruby interface to the Zesty.io API. Not all API actions are supported."
+  spec.homepage = "https://github.com/jackpocket/zesty-rb"
+  spec.license = "MIT"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage

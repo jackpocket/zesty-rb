@@ -174,6 +174,29 @@ RSpec.describe Zesty::Client do
     end
   end
 
+  describe '#create_item' do
+    it "creates an item successfully" do
+      item = VCR.use_cassette("zesty/instances/create_item") do
+        result = client.create_item(
+          model_zuid,
+          web: {
+            meta_title: "Example Only",
+            meta_link_text: "Example Link Text",
+          },
+          data: {
+            display_order: 4,
+            lottery_name: "Test Lottery",
+            jackpot_amount: 5_000_000,
+            next_drawing: "2024-01-26",
+            primary_color: "#ff0000"
+          }
+        )
+      end
+
+      pp item
+    end
+  end
+
   describe '#update_item' do
     it "updates an item successfully" do
       model = VCR.use_cassette("zesty/instances/update_item") do

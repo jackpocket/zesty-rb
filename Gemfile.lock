@@ -35,7 +35,7 @@ GEM
     llhttp-ffi (0.5.0)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
-    public_suffix (6.0.1)
+    public_suffix (4.0.7)
     rake (13.2.1)
     rexml (3.4.0)
     rspec (3.13.0)
@@ -63,7 +63,7 @@ GEM
     simplecov_json_formatter (0.1.4)
     vcr (6.3.1)
       base64
-    webmock (3.24.0)
+    webmock (3.25.0)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)

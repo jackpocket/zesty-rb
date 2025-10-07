@@ -1,0 +1,144 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auth.api.zesty.io/login
+    body:
+      encoding: ASCII-8BIT
+      string: "-----------------------07b6f0a2033597a319258a45e0a322a991bea61bdf\r\nContent-Disposition:
+        form-data; name=\"email\"\r\n\r\n<EMAIL>\r\n-----------------------07b6f0a2033597a319258a45e0a322a991bea61bdf\r\nContent-Disposition:
+        form-data; name=\"password\"\r\n\r\n<PASSWORD>\r\n-----------------------07b6f0a2033597a319258a45e0a322a991bea61bdf--\r\n"
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Type:
+      - multipart/form-data; boundary=---------------------07b6f0a2033597a319258a45e0a322a991bea61bdf
+      Host:
+      - auth.api.zesty.io
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 26 Jan 2024 18:28:46 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '214'
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - DENY
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Surrogate-Control:
+      - no-store
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, proxy-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Referrer-Policy:
+      - no-referrer
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Set-Cookie:
+      - APP_SID=<TOKEN>; Domain=.zesty.io; Path=/; Secure
+      Etag:
+      - W/"d6-WN5CQNLLuZKo33BAXFzKkdIOSC8"
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"message":"Logged in successfully.","status":"OK","data":{"data":"<TOKEN>"},"meta":{"userZuid":"5-d8daa08585-l6620k","token":"<TOKEN>"},"code":200}'
+  recorded_at: Fri, 26 Jan 2024 18:28:46 GMT
+- request:
+    method: post
+    uri: https://<INSTANCE_ZUID>.api.zesty.io/v1/content/models/6-d08392dbc9-9gl4bk/items
+    body:
+      encoding: ASCII-8BIT
+      string: '{"web":{"metaTitle":"Example Only","metaLinkText":"Example Link Text"},"data":{"display_order":4,"lottery_name":"Test
+        Lottery","jackpot_amount":5000000,"next_drawing":"2024-01-26","primary_color":"#ff0000"}}'
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=UTF-8
+      Host:
+      - "<INSTANCE_ZUID>.api.zesty.io"
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Fri, 26 Jan 2024 18:28:46 GMT
+      Content-Type:
+      - text/plain; charset=utf-8
+      Content-Length:
+      - '142'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization,
+        accept, origin, Cache-Control, X-Requested-With, X-Auth
+      Access-Control-Allow-Methods:
+      - PUT, POST, GET, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Content-Security-Policy:
+      - ''
+      Feature-Policy:
+      - ''
+      Instances-Api-Cache:
+      - unreachable
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - sameorigin
+      X-Permitted-Cross-Domain-Policies:
+      - ''
+      X-Xss-Protection:
+      - 1;mode=block
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"_meta":{"timestamp":"2024-01-26T18:28:46.52808851Z","totalResults":1,"start":0,"offset":0,"limit":1},"data":{"ZUID":"7-d48aa29bd3-r1nqf7"}}
+
+        '
+  recorded_at: Fri, 26 Jan 2024 18:28:46 GMT
+recorded_with: VCR 6.1.0

@@ -1,6 +1,10 @@
 Changelog
 =========
 
+## Unreleased
+
+* Require Ruby 3.2+
+
 ## 0.3.0 (2024-07-31)
 
 * Only package essential files in gem release.

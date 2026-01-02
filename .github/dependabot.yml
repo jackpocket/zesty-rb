@@ -7,9 +7,10 @@ updates:
       time: "12:00"
       timezone: America/New_York
     open-pull-requests-limit: 10
-    allow:
-      - dependency-type: direct
-      - dependency-type: indirect
+    groups:
+      bundler:
+        patterns:
+          - "*"
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
@@ -17,3 +18,7 @@ updates:
       time: "12:00"
       timezone: America/New_York
     open-pull-requests-limit: 10
+    groups:
+      github-actions:
+        patterns:
+          - "*"

@@ -7,9 +7,9 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.9)
+    addressable (2.9.0)
       public_suffix (>= 2.0.2, < 8.0)
-    bigdecimal (4.1.0)
+    bigdecimal (4.1.1)
     crack (1.0.1)
       bigdecimal
       rexml
@@ -21,7 +21,7 @@ GEM
     http (6.0.2)
       http-cookie (~> 1.0)
       llhttp (~> 0.6.1)
-    http-cookie (1.1.0)
+    http-cookie (1.1.4)
       domain_name (~> 0.5)
     llhttp (0.6.1)
     public_suffix (7.0.5)

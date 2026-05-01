@@ -9,7 +9,7 @@ GEM
   specs:
     addressable (2.9.0)
       public_suffix (>= 2.0.2, < 8.0)
-    bigdecimal (4.1.1)
+    bigdecimal (4.1.2)
     crack (1.0.1)
       bigdecimal
       rexml
@@ -18,14 +18,14 @@ GEM
     domain_name (0.6.20240107)
     dotenv (3.2.0)
     hashdiff (1.2.1)
-    http (6.0.2)
+    http (6.0.3)
       http-cookie (~> 1.0)
       llhttp (~> 0.6.1)
-    http-cookie (1.1.4)
+    http-cookie (1.1.6)
       domain_name (~> 0.5)
     llhttp (0.6.1)
     public_suffix (7.0.5)
-    rake (13.3.1)
+    rake (13.4.2)
     rexml (3.4.4)
     rspec (3.13.2)
       rspec-core (~> 3.13.0)
